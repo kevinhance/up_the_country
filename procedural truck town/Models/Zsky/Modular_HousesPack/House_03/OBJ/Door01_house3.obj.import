@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dy34k4n7hiu0q"
+path="res://.godot/imported/Door01_house3.obj-aa32c262d9143c4e3fd01154ad8d8430.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Door01_house3.obj-aa32c262d9143c4e3fd01154ad8d8430.mesh"]
+
+source_file="res://Models/Zsky/Modular_HousesPack/House_03/OBJ/Door01_house3.obj"
+dest_files=["res://.godot/imported/Door01_house3.obj-aa32c262d9143c4e3fd01154ad8d8430.mesh", "res://.godot/imported/Door01_house3.obj-aa32c262d9143c4e3fd01154ad8d8430.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

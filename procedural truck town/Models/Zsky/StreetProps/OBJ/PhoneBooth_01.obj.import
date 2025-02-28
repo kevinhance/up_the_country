@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bhf564okqfxsp"
+path="res://.godot/imported/PhoneBooth_01.obj-343ba9719af7855671f3145faf5c9503.mesh"
+
+[deps]
+
+files=["res://.godot/imported/PhoneBooth_01.obj-343ba9719af7855671f3145faf5c9503.mesh"]
+
+source_file="res://Models/Zsky/StreetProps/OBJ/PhoneBooth_01.obj"
+dest_files=["res://.godot/imported/PhoneBooth_01.obj-343ba9719af7855671f3145faf5c9503.mesh", "res://.godot/imported/PhoneBooth_01.obj-343ba9719af7855671f3145faf5c9503.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

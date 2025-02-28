@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cxsr1327yppcb"
+path="res://.godot/imported/Pumpkin01.obj-9e7d8dd2eba04c6853e383b0958b48b4.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Pumpkin01.obj-9e7d8dd2eba04c6853e383b0958b48b4.mesh"]
+
+source_file="res://Models/Zsky/Food_Pack01/OBJ/Pumpkin01.obj"
+dest_files=["res://.godot/imported/Pumpkin01.obj-9e7d8dd2eba04c6853e383b0958b48b4.mesh", "res://.godot/imported/Pumpkin01.obj-9e7d8dd2eba04c6853e383b0958b48b4.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

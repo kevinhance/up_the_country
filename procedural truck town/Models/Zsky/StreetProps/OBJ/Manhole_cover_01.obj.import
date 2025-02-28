@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c1sjesctak0fs"
+path="res://.godot/imported/Manhole_cover_01.obj-41add6775f86a40f6c705811d1542626.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Manhole_cover_01.obj-41add6775f86a40f6c705811d1542626.mesh"]
+
+source_file="res://Models/Zsky/StreetProps/OBJ/Manhole_cover_01.obj"
+dest_files=["res://.godot/imported/Manhole_cover_01.obj-41add6775f86a40f6c705811d1542626.mesh", "res://.godot/imported/Manhole_cover_01.obj-41add6775f86a40f6c705811d1542626.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

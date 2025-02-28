@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b2f8tgdnok0tk"
+path="res://.godot/imported/PowerGenerator_02.obj-a4f4e6d11b150e5a66d48f2d751f12b6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/PowerGenerator_02.obj-a4f4e6d11b150e5a66d48f2d751f12b6.mesh"]
+
+source_file="res://Models/Zsky/StreetProps/OBJ/PowerGenerator_02.obj"
+dest_files=["res://.godot/imported/PowerGenerator_02.obj-a4f4e6d11b150e5a66d48f2d751f12b6.mesh", "res://.godot/imported/PowerGenerator_02.obj-a4f4e6d11b150e5a66d48f2d751f12b6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

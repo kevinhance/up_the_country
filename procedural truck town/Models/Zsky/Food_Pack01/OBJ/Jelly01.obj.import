@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ce14eptuovetc"
+path="res://.godot/imported/Jelly01.obj-3d5de47cdbaefab98c7aca12e8cdb5c6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Jelly01.obj-3d5de47cdbaefab98c7aca12e8cdb5c6.mesh"]
+
+source_file="res://Models/Zsky/Food_Pack01/OBJ/Jelly01.obj"
+dest_files=["res://.godot/imported/Jelly01.obj-3d5de47cdbaefab98c7aca12e8cdb5c6.mesh", "res://.godot/imported/Jelly01.obj-3d5de47cdbaefab98c7aca12e8cdb5c6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

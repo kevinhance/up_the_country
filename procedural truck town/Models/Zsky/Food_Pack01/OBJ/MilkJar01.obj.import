@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cx87kbfduf782"
+path="res://.godot/imported/MilkJar01.obj-66b587851d12e9ed9db80280a203f694.mesh"
+
+[deps]
+
+files=["res://.godot/imported/MilkJar01.obj-66b587851d12e9ed9db80280a203f694.mesh"]
+
+source_file="res://Models/Zsky/Food_Pack01/OBJ/MilkJar01.obj"
+dest_files=["res://.godot/imported/MilkJar01.obj-66b587851d12e9ed9db80280a203f694.mesh", "res://.godot/imported/MilkJar01.obj-66b587851d12e9ed9db80280a203f694.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

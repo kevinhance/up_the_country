@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://gwj3h0bkjtmd"
+path="res://.godot/imported/Cake02.obj-576908018ab22be71addafc8919cfad2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cake02.obj-576908018ab22be71addafc8919cfad2.mesh"]
+
+source_file="res://Models/Zsky/Food_Pack01/OBJ/Cake02.obj"
+dest_files=["res://.godot/imported/Cake02.obj-576908018ab22be71addafc8919cfad2.mesh", "res://.godot/imported/Cake02.obj-576908018ab22be71addafc8919cfad2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

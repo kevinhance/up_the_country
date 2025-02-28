@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bgv14fgei1yrl"
+path="res://.godot/imported/Normal_tree.obj-71ba53f8fc619905e909f703723061a7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Normal_tree.obj-71ba53f8fc619905e909f703723061a7.mesh"]
+
+source_file="res://Models/Zsky/OBJ/Normal_tree.obj"
+dest_files=["res://.godot/imported/Normal_tree.obj-71ba53f8fc619905e909f703723061a7.mesh", "res://.godot/imported/Normal_tree.obj-71ba53f8fc619905e909f703723061a7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

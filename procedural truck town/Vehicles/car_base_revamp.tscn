@@ -1,0 +1,277 @@
+[gd_scene load_steps=21 format=3 uid="uid://c0srgevnn55qu"]
+
+[ext_resource type="Script" path="res://Scripts/vehicle.gd" id="1_tauhk"]
+[ext_resource type="ArrayMesh" uid="uid://bqrwin8ccgptt" path="res://Vehicles/meshes/wheel.res" id="2_exonc"]
+[ext_resource type="Script" path="res://Scripts/follow_camera.gd" id="4_rkps3"]
+[ext_resource type="AudioStream" uid="uid://claf7oqj3o2nx" path="res://Sounds/FX/engine.wav" id="5_rj6bd"]
+[ext_resource type="AudioStream" uid="uid://sy2li7u35867" path="res://Sounds/FX/impact_1.wav" id="6_36p4d"]
+[ext_resource type="AudioStream" uid="uid://bf0h7s81yr8nj" path="res://Sounds/FX/impact_2.wav" id="7_xjgaq"]
+[ext_resource type="AudioStream" uid="uid://sun2n8a4xapl" path="res://Sounds/FX/impact_3.wav" id="8_7b3cc"]
+[ext_resource type="AudioStream" uid="uid://dpbayeeufya21" path="res://Sounds/FX/impact_4.wav" id="9_jol04"]
+[ext_resource type="Texture2D" uid="uid://d4ostmqwgytk" path="res://Vehicles/particle_smoke.png" id="10_kpedf"]
+[ext_resource type="Texture2D" uid="uid://bju75l2w3r7vq" path="res://Vehicles/blob_shadow.png" id="11_hetq4"]
+[ext_resource type="Script" path="res://Scripts/enter_car_area.gd" id="12_iu3k7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l7i2k"]
+friction = 0.5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ekcy"]
+size = Vector3(3.838, 1.139, 1.3)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_bpr2q"]
+random_pitch = 1.05
+random_volume_offset_db = 2.0
+streams_count = 4
+stream_0/stream = ExtResource("6_36p4d")
+stream_1/stream = ExtResource("7_xjgaq")
+stream_2/stream = ExtResource("8_7b3cc")
+stream_3/stream = ExtResource("9_jol04")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fuuj3"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.462745, 0.462745, 0.462745, 0.501961)
+albedo_texture = ExtResource("10_kpedf")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+proximity_fade_enabled = true
+proximity_fade_distance = 0.5
+
+[sub_resource type="QuadMesh" id="QuadMesh_30wks"]
+material = SubResource("StandardMaterial3D_fuuj3")
+
+[sub_resource type="Curve" id="Curve_4j5vd"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_p5xtl"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_csjtj"]
+height = 3.2
+radius = 1.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65vnw"]
+albedo_color = Color(0.593134, 0.593134, 0.593134, 1)
+metallic = 0.72
+metallic_specular = 0.4
+roughness = 0.35
+
+[node name="CarBase" type="Node3D"]
+
+[node name="Body" type="VehicleBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00169557, 0.222867, -0.0955184)
+physics_material_override = SubResource("PhysicsMaterial_l7i2k")
+center_of_mass_mode = 1
+script = ExtResource("1_tauhk")
+
+[node name="Wheel1" type="VehicleWheel3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.573678, 0.115169, 1.10416)
+use_as_traction = true
+use_as_steering = true
+wheel_roll_influence = 0.4
+wheel_radius = 0.25
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="Wheel1" type="MeshInstance3D" parent="Body/Wheel1"]
+layers = 2
+gi_mode = 2
+mesh = ExtResource("2_exonc")
+
+[node name="Wheel2" type="VehicleWheel3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.573678, 0.115169, -0.783403)
+use_as_traction = true
+wheel_roll_influence = 0.4
+wheel_radius = 0.25
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="Wheel2" type="MeshInstance3D" parent="Body/Wheel2"]
+layers = 2
+gi_mode = 2
+mesh = ExtResource("2_exonc")
+
+[node name="Wheel3" type="VehicleWheel3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.573678, 0.115169, 1.10416)
+use_as_traction = true
+use_as_steering = true
+wheel_roll_influence = 0.4
+wheel_radius = 0.25
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="Wheel3" type="MeshInstance3D" parent="Body/Wheel3"]
+layers = 2
+gi_mode = 2
+mesh = ExtResource("2_exonc")
+
+[node name="Wheel4" type="VehicleWheel3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.573678, 0.115169, -0.783403)
+use_as_traction = true
+wheel_roll_influence = 0.4
+wheel_radius = 0.25
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="Wheel4" type="MeshInstance3D" parent="Body/Wheel4"]
+layers = 2
+gi_mode = 2
+mesh = ExtResource("2_exonc")
+
+[node name="RVCollisionShape" type="CollisionShape3D" parent="Body"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00086033, 0.918042, 0.467342)
+shape = SubResource("BoxShape3D_0ekcy")
+
+[node name="CameraBase" type="Node3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.97449, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Body/CameraBase"]
+transform = Transform3D(-1, 2.11495e-08, -8.48259e-08, 0, 0.970296, 0.241922, 8.74228e-08, 0.241922, -0.970296, 0, 2.032, -4.394)
+fov = 74.0
+near = 0.1
+script = ExtResource("4_rkps3")
+min_distance = 4.0
+max_distance = 5.0
+height = 1.25
+
+[node name="EngineSound" type="AudioStreamPlayer3D" parent="Body"]
+stream = ExtResource("5_rj6bd")
+volume_db = -80.0
+pitch_scale = 0.05
+attenuation_filter_cutoff_hz = 20500.0
+
+[node name="ImpactSound" type="AudioStreamPlayer3D" parent="Body"]
+stream = SubResource("AudioStreamRandomizer_bpr2q")
+volume_db = -10.0
+max_polyphony = 3
+attenuation_filter_cutoff_hz = 20500.0
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.201696, -0.022867, -1.10448)
+amount = 125
+lifetime = 1.25
+mesh = SubResource("QuadMesh_30wks")
+direction = Vector3(0, 1, -0.5)
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 1.0
+damping_min = 0.05
+damping_max = 0.05
+angle_max = 360.0
+scale_amount_curve = SubResource("Curve_4j5vd")
+color_ramp = SubResource("Gradient_p5xtl")
+
+[node name="BlobShadow" type="Decal" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.05)
+size = Vector3(1.6, 4, 3)
+texture_albedo = ExtResource("11_hetq4")
+upper_fade = 2.0
+lower_fade = 1.0
+cull_mask = 1048573
+
+[node name="AudioListener3D" type="AudioListener3D" parent="Body"]
+current = true
+
+[node name="InteriorCameraPosition" type="Marker3D" parent="Body"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.9, 0.3)
+
+[node name="TopDownCameraPosition" type="Marker3D" parent="Body"]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0.00169557, 15.7771, 0.0955178)
+
+[node name="EnterCarArea" type="Area3D" parent="Body"]
+script = ExtResource("12_iu3k7")
+interact_prompt = "[E]"
+
+[node name="EnterCarCollisionShape" type="CollisionShape3D" parent="Body/EnterCarArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.604551, 0.0971579)
+shape = SubResource("CylinderShape3D_csjtj")
+
+[node name="BodyUnion" type="CSGPolygon3D" parent="Body"]
+transform = Transform3D(1.5593e-08, 0, -1.29702, 0, 0.972194, 0, 1.3076, 0, 1.54668e-08, -0.648775, 0.206816, -0.298839)
+polygon = PackedVector2Array(-0.61392, -0.0622993, -0.545379, 0.158134, -0.240307, 0.161281, -0.161859, -0.0524035, 0.831631, -0.0260021, 0.923827, 0.186643, 1.20173, 0.161679, 1.27584, -0.00777802, 1.62638, 0.0108738, 1.64991, 0.216493, 1.57931, 0.406358, 1.1942, 0.479843, 1.06122, 0.890128, 1.62592, 0.910131, 1.61835, 1.08328, 1.51446, 1.33892, 0.57932, 1.385, -1.41148, 1.29, -1.39972, 0.15121)
+material = SubResource("StandardMaterial3D_65vnw")
+
+[node name="DoorSubtract" type="CSGBox3D" parent="Body/BodyUnion"]
+transform = Transform3D(1, 0, -3.73035e-13, 0, 0.99999, 0, 3.55271e-15, 0, 1, 0.0978048, 0.70661, -0.0673251)
+operation = 2
+size = Vector3(0.435852, 0.993957, 0.16835)
+
+[node name="InteriorSubtract" type="CSGBox3D" parent="Body/BodyUnion"]
+transform = Transform3D(1, 0, 3.55271e-15, 0, 0.999988, 0, 3.55271e-15, 0, 0.853608, -0.197753, 0.720142, -0.505443)
+operation = 2
+size = Vector3(2.4541, 1.00665, 1)
+
+[node name="InteriorOverhangSubtract" type="CSGBox3D" parent="Body/BodyUnion"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -3.55271e-15, 0, 0.853608, 0.878067, 1.11023, -0.505443)
+operation = 2
+size = Vector3(1.27841, 0.304718, 1)
+
+[node name="FrontWindowSubtract" type="CSGBox3D" parent="Body/BodyUnion"]
+transform = Transform3D(0.999659, -0.0260581, -1.38556e-11, 0.0260516, 0.999647, 1.06073e-09, -1.44382e-11, -1.14838e-09, 0.923954, 0.938058, 0.683833, -0.505443)
+operation = 2
+size = Vector3(0.533585, 0.371736, 1)
+
+[node name="CounterUnion" type="CSGBox3D" parent="Body/BodyUnion"]
+transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.925119, 0, 7.10543e-15, 0, 0.493625, -0.0610961, 0.383774, -0.84775)
+size = Vector3(0.877808, 0.539795, 0.410645)
+
+[node name="CupboardDrawerSubtract1" type="CSGBox3D" parent="Body/BodyUnion"]
+transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.925087, 0, 1.42819e-12, 0, 0.493625, -0.356409, 1.11906, -0.74935)
+operation = 2
+size = Vector3(0.180649, 0.153244, 0.0119629)
+
+[node name="CounterDrawerSubtract1" type="CSGBox3D" parent="Body/BodyUnion"]
+transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.925075, 0, 1.92557e-12, 0, 0.493625, -0.356409, 0.428069, -0.74935)
+operation = 2
+size = Vector3(0.180649, 0.317617, 0.0119629)
+
+[node name="CounterDrawerSubtract3" type="CSGBox3D" parent="Body/BodyUnion"]
+transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.92507, 0, 2.1565e-12, 0, 0.493625, 0.197578, 0.428069, -0.74935)
+operation = 2
+size = Vector3(0.29882, 0.317617, 0.0119629)
+
+[node name="CounterDrawerSubtract2" type="CSGBox3D" parent="Body/BodyUnion"]
+transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.925058, 0, 2.66098e-12, 0, 0.493625, -0.110246, 0.348095, -0.74935)
+operation = 2
+size = Vector3(0.260124, 0.144712, 0.0119629)
+
+[node name="CupboardDrawerSubtract2" type="CSGBox3D" parent="Body/BodyUnion"]
+transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.925087, 0, 1.43174e-12, 0, 0.493625, -0.140686, 1.11906, -0.74935)
+operation = 2
+size = Vector3(0.180649, 0.153244, 0.0119629)
+
+[node name="CupboardDrawerSubtract3" type="CSGBox3D" parent="Body/BodyUnion"]
+transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.925087, 0, 1.43174e-12, 0, 0.493625, 0.238884, 1.11906, -0.74935)
+operation = 2
+size = Vector3(0.180649, 0.153244, 0.0119629)
+
+[node name="CupboardDrawerSubtract4" type="CSGBox3D" parent="Body/BodyUnion"]
+transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.925083, 0, 1.59162e-12, 0, 0.493625, 0.0509454, 1.11906, -0.74935)
+operation = 2
+size = Vector3(0.141106, 0.153244, 0.0119629)
+
+[node name="CupboardUnion" type="CSGBox3D" parent="Body/BodyUnion"]
+transform = Transform3D(1, 0, -2.07834e-13, 0, 0.925132, 0, 3.55271e-15, 0, 0.493631, -0.0610961, 1.1329, -0.84775)
+size = Vector3(0.877808, 0.283813, 0.410645)
+
+[node name="SinkSubtract" type="CSGSphere3D" parent="Body/BodyUnion"]
+transform = Transform3D(1, 0, -4.26326e-14, 0, 0.999999, 0, 3.55271e-15, 0, 1, -0.116049, 0.634067, -0.834818)
+operation = 2
+radius = 0.0783715
+radial_segments = 17
+rings = 16
+
+[connection signal="body_entered" from="Body/EnterCarArea" to="Body" method="_on_enter_car_area_body_entered"]

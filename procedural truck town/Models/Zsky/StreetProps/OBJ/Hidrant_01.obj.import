@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://4erhuoc4rwmi"
+path="res://.godot/imported/Hidrant_01.obj-50185ba52fdda5545bd1c9991b547196.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hidrant_01.obj-50185ba52fdda5545bd1c9991b547196.mesh"]
+
+source_file="res://Models/Zsky/StreetProps/OBJ/Hidrant_01.obj"
+dest_files=["res://.godot/imported/Hidrant_01.obj-50185ba52fdda5545bd1c9991b547196.mesh", "res://.godot/imported/Hidrant_01.obj-50185ba52fdda5545bd1c9991b547196.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://civdvln3m4ago"
+path="res://.godot/imported/GreyTree.obj-626632755038b4f86728de8c6900f343.mesh"
+
+[deps]
+
+files=["res://.godot/imported/GreyTree.obj-626632755038b4f86728de8c6900f343.mesh"]
+
+source_file="res://Models/Zsky/OBJ/GreyTree.obj"
+dest_files=["res://.godot/imported/GreyTree.obj-626632755038b4f86728de8c6900f343.mesh", "res://.godot/imported/GreyTree.obj-626632755038b4f86728de8c6900f343.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

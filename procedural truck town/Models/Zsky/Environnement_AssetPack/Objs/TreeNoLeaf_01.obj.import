@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d0max6dl4subr"
+path="res://.godot/imported/TreeNoLeaf_01.obj-f5de4cedceb1f478281a7d323fc1dfb3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/TreeNoLeaf_01.obj-f5de4cedceb1f478281a7d323fc1dfb3.mesh"]
+
+source_file="res://Models/Zsky/Environnement_AssetPack/Objs/TreeNoLeaf_01.obj"
+dest_files=["res://.godot/imported/TreeNoLeaf_01.obj-f5de4cedceb1f478281a7d323fc1dfb3.mesh", "res://.godot/imported/TreeNoLeaf_01.obj-f5de4cedceb1f478281a7d323fc1dfb3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

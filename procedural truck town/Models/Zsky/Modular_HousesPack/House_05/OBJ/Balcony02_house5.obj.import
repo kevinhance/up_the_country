@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dr3chhju5qg24"
+path="res://.godot/imported/Balcony02_house5.obj-699e704864c2a8a8853786d8a0dca743.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Balcony02_house5.obj-699e704864c2a8a8853786d8a0dca743.mesh"]
+
+source_file="res://Models/Zsky/Modular_HousesPack/House_05/OBJ/Balcony02_house5.obj"
+dest_files=["res://.godot/imported/Balcony02_house5.obj-699e704864c2a8a8853786d8a0dca743.mesh", "res://.godot/imported/Balcony02_house5.obj-699e704864c2a8a8853786d8a0dca743.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

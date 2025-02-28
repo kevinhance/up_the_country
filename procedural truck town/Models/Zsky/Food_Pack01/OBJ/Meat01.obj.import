@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dikj13deeqyo7"
+path="res://.godot/imported/Meat01.obj-f5cce4c6e70df42bcc33d3e3cc9fecb6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Meat01.obj-f5cce4c6e70df42bcc33d3e3cc9fecb6.mesh"]
+
+source_file="res://Models/Zsky/Food_Pack01/OBJ/Meat01.obj"
+dest_files=["res://.godot/imported/Meat01.obj-f5cce4c6e70df42bcc33d3e3cc9fecb6.mesh", "res://.godot/imported/Meat01.obj-f5cce4c6e70df42bcc33d3e3cc9fecb6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

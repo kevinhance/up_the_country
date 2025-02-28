@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d2dilqccgd8p4"
+path="res://.godot/imported/Vines.obj-75a64f64c25bc67ec82c4f77ebd946c0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Vines.obj-75a64f64c25bc67ec82c4f77ebd946c0.mesh"]
+
+source_file="res://Models/Zsky/Environnement_AssetPack/Objs/Vines.obj"
+dest_files=["res://.godot/imported/Vines.obj-75a64f64c25bc67ec82c4f77ebd946c0.mesh", "res://.godot/imported/Vines.obj-75a64f64c25bc67ec82c4f77ebd946c0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

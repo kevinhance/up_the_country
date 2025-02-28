@@ -1,0 +1,34 @@
+Low poly pixel art 3D Environnement pack.
+It contains 9 diferrent models and 15 different textures.
+
+Package includes:
+
+Bush: 112 verts, 98 tris.
+
+Cliff_01: 98 verts, 192 tris.
+
+Cliff_02: 98 verts, 192 tris.
+
+TreeLeaf_01: 246 verts, 444 tris.
+
+TreeLeaf_02: 568 verts, 1020 tris.
+
+TreeNoLeaf_01: 210 verts, 380 tris.
+
+TreeNoLeaf_02: 450 verts, 812 tris.
+
+Wood_bridge: 24 verts, 44 tris.	
+
+Vines: 15 verts, 16 tris.	
+	
+
+
+All the assets are free for any use but please don't resell them​ and Credit me (@CreativeSky2000).
+
+If you have any problems please contact me.
+
+Feel free to comment bellow.
+
+Hope you enjoy and thanks for buying 
+
+:D

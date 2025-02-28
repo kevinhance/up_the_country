@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckeaklinhydqa"]
+
+[ext_resource type="Material" uid="uid://cye5qu3rwkrsx" path="res://Vehicles/greenzone.tres" id="1_lfhyn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3soy0"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.36999, 0, 0, 0, 2.9308, 0, 0, 0, 10.034, 0, 1.14141, 0)
+material_override = ExtResource("1_lfhyn")
+mesh = SubResource("BoxMesh_3soy0")

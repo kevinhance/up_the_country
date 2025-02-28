@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://10sx2lm8mb0v"
+path="res://.godot/imported/SignBoard_02.obj-6cdb6437bc61206bc71cd79b1580c378.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SignBoard_02.obj-6cdb6437bc61206bc71cd79b1580c378.mesh"]
+
+source_file="res://Models/Zsky/StreetProps/OBJ/SignBoard_02.obj"
+dest_files=["res://.godot/imported/SignBoard_02.obj-6cdb6437bc61206bc71cd79b1580c378.mesh", "res://.godot/imported/SignBoard_02.obj-6cdb6437bc61206bc71cd79b1580c378.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://inwwb8cmo7y2"
+path="res://.godot/imported/Branches2D_01.obj-5962e921643842d4b5764261ab90f862.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Branches2D_01.obj-5962e921643842d4b5764261ab90f862.mesh"]
+
+source_file="res://Models/Zsky/Environnement_AssetPack/Objs/Branches2D_01.obj"
+dest_files=["res://.godot/imported/Branches2D_01.obj-5962e921643842d4b5764261ab90f862.mesh", "res://.godot/imported/Branches2D_01.obj-5962e921643842d4b5764261ab90f862.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

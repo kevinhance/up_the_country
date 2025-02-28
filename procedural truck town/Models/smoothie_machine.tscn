@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://byn7vuj5nioym"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nsxdb"]
+albedo_color = Color(0.393086, 0.393086, 0.393085, 1)
+metallic = 1.0
+metallic_specular = 0.68
+roughness = 0.52
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wxlcm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1jc0e"]
+transparency = 1
+albedo_color = Color(0, 0.984314, 0.988235, 0.462745)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hcu78"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_78yaf"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1.00607, 0, 0, 0, 1.00607, 0, 0, 0, 1.00607, 0, 1.23698, -0.943848)
+material_override = SubResource("StandardMaterial3D_nsxdb")
+material_overlay = SubResource("StandardMaterial3D_wxlcm")
+size = Vector3(1, 2.24133, 2.8877)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGBox3D"]
+transform = Transform3D(0.999999, 0, 0, 0, -0.00452044, 0.999989, 0, -0.999989, -0.00452044, -0.0965843, 1.33081, 0.00597185)
+material_override = SubResource("StandardMaterial3D_1jc0e")
+operation = 2
+height = 3.04032
+sides = 11
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.861097, -0.196906, 0.468764, 0, 0.921965, 0.387274, -0.50844, -0.333481, 0.793901, 1.41207, 4.43468, 3.1531)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(5.72452, 0, 0, 0, 0.100821, 0, 0, 0, 9.96967, 0, -0.366842, 0)
+material_override = SubResource("StandardMaterial3D_hcu78")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="CSGBox3D2"]
+transform = Transform3D(0.174687, 0, 0, 0, 8.89738, 4.3834, 0, -0.0443284, 0.0899774, 0, 91.5308, 0.691348)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.00452044, 0.99999, 0, -0.99999, -0.00452044, 0, 2.57964, -0.947308)
+material_override = SubResource("StandardMaterial3D_1jc0e")
+height = 3.04032
+sides = 11
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCylinder3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.905)
+height = 3.04032
+sides = 11
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCylinder3D"]
+transform = Transform3D(0.95, 0, 0, 0, 0.95, -3.44577e-08, 0, 3.44577e-08, 0.95, 0, 0, 0.484)
+size = Vector3(1, 3.1947, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(0.545634, -0.085018, 0, 0.838024, 0.0553549, 0, 0, 0, 2.89214, -0.192426, 2.5768, -0.949027)
+material_override = SubResource("StandardMaterial3D_78yaf")
+size = Vector3(0.683105, 1, 0.973145)

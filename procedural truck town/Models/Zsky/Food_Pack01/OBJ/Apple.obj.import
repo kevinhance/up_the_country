@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dve87bprvrvlp"
+path="res://.godot/imported/Apple.obj-cefb7f5121b49347c5c62c124c7a22f8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Apple.obj-cefb7f5121b49347c5c62c124c7a22f8.mesh"]
+
+source_file="res://Models/Zsky/Food_Pack01/OBJ/Apple.obj"
+dest_files=["res://.godot/imported/Apple.obj-cefb7f5121b49347c5c62c124c7a22f8.mesh", "res://.godot/imported/Apple.obj-cefb7f5121b49347c5c62c124c7a22f8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

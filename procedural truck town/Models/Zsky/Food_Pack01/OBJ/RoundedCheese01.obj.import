@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cn61bfl8u2h7a"
+path="res://.godot/imported/RoundedCheese01.obj-6c9e59de709f04f60f430224d1b6a3fc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/RoundedCheese01.obj-6c9e59de709f04f60f430224d1b6a3fc.mesh"]
+
+source_file="res://Models/Zsky/Food_Pack01/OBJ/RoundedCheese01.obj"
+dest_files=["res://.godot/imported/RoundedCheese01.obj-6c9e59de709f04f60f430224d1b6a3fc.mesh", "res://.godot/imported/RoundedCheese01.obj-6c9e59de709f04f60f430224d1b6a3fc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dueo71na25wpj"
+path="res://.godot/imported/Pie01.obj-33748315b8a33cb9a8aab6c7ee38261a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Pie01.obj-33748315b8a33cb9a8aab6c7ee38261a.mesh"]
+
+source_file="res://Models/Zsky/Food_Pack01/OBJ/Pie01.obj"
+dest_files=["res://.godot/imported/Pie01.obj-33748315b8a33cb9a8aab6c7ee38261a.mesh", "res://.godot/imported/Pie01.obj-33748315b8a33cb9a8aab6c7ee38261a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
