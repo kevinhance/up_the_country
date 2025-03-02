@@ -1,5 +1,3 @@
-res://Car Select/car_select.tscn
-res://Procedural Generation/Materials/TerrainShader.tres
 res://Town/town_scene.tscn
-res://Vehicles/rv_enlarged.tscn
-res://Vehicles/trailer_truck.tscn
+res://Procedural Generation/Materials/TerrainShader.tres
+res://Scripts/town_scene.gd

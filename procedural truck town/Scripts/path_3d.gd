@@ -4,6 +4,7 @@ extends Path3D
 
 var crv = $".".curve
 
+
 # Standard step amount for each point
 var step: float = 1.0
 
@@ -29,31 +30,27 @@ func _ready():
 		# If the curve is empty, start at the origin
 		current_position = Vector3(0, 0, 0)
 	# Loop to add points
+	var crv_dup : Curve3D = Curve3D.new()
+	
 	for i in range(num_points):
 		# Add a random offset to the step
 		var random_offset: float = randf_range(-random_offset_range, random_offset_range)
 		current_position.x -= 30
 		in_pt = Vector3(0, 0, 0)
 		if random_offset < 0.0:
-			
 			if random_offset < (-random_offset_range / 2.0):
-				current_position.z -= 30
+				current_position.z -= 30 / random_offset_range
 			else:
 				current_position.z += 30
-				
-			in_pt.x += random_offset * 4.0
-			in_pt.y += random_offset / 10.0
-			in_pt.z += random_offset
+		elif random_offset > 0.0:
+			if random_offset < (-random_offset_range / 2.0):
+				current_position.x -= 30 / random_offset_range
+			else:
+				current_position.x += 30
 		else:
 			pass
 		
-		'''current_position.x += step + random_offset
-		current_position.y += step + random_offset
-		current_position.z += step + random_offset'''
-		#in_pt = Vector3(0, 0, 0)
-		'''in_pt.x += random_offset
-		in_pt.y += random_offset
-		in_pt.z += random_offset'''
+
 		out_pt = -in_pt
 		# Add the point to the curve
 		curve.add_point(current_position, in_pt, out_pt)

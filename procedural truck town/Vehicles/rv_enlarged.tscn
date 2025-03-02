@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bfo3jfddvpo04"]
+[gd_scene load_steps=23 format=3 uid="uid://bfo3jfddvpo04"]
 
 [ext_resource type="Script" path="res://Scripts/vehicle.gd" id="1_5w0wu"]
 [ext_resource type="ArrayMesh" uid="uid://bqrwin8ccgptt" path="res://Vehicles/meshes/wheel.res" id="2_0eb54"]
@@ -56,10 +56,16 @@ height = 3.2
 radius = 1.1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65vnw"]
-albedo_color = Color(0.593134, 0.593134, 0.593134, 1)
-metallic = 0.72
+albedo_color = Color(0.325441, 0.325441, 0.325441, 1)
+metallic = 0.16
 metallic_specular = 0.4
 roughness = 0.35
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_13va2"]
+albedo_color = Color(0.197937, 0.197937, 0.197937, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bt2id"]
+albedo_color = Color(0.453633, 0.305856, 0.209006, 1)
 
 [node name="CarBase" type="Node3D"]
 
@@ -201,14 +207,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.604551, 0.0971579)
 shape = SubResource("CylinderShape3D_csjtj")
 
 [node name="BodyUnion" type="CSGPolygon3D" parent="Body"]
-transform = Transform3D(-9.95745e-08, 0, -2.259, 0, 1.693, 0, 2.278, 0, -9.8744e-08, -1.07558, 0.206816, -0.298839)
+transform = Transform3D(-9.95745e-08, 0, -2.259, 0, 1.693, 0, 2.278, 0, -9.8744e-08, -1.1079, 0.206816, -0.298839)
 polygon = PackedVector2Array(-0.61392, -0.0622993, -0.545379, 0.158134, -0.240307, 0.161281, -0.161859, -0.0524035, 0.831631, -0.0260021, 0.923827, 0.186643, 1.20173, 0.161679, 1.27584, -0.00777802, 1.62638, 0.0108738, 1.64991, 0.216493, 1.57931, 0.406358, 1.1942, 0.479843, 1.06122, 0.890128, 1.62592, 0.910131, 1.61835, 1.08328, 1.51446, 1.33892, 0.57932, 1.385, -1.41148, 1.29, -1.39972, 0.15121)
 material = SubResource("StandardMaterial3D_65vnw")
 
 [node name="DoorSubtract" type="CSGBox3D" parent="Body/BodyUnion"]
-transform = Transform3D(1, 0, -3.73035e-13, 0, 0.99999, 0, 3.55271e-15, 0, 1, 0.0978048, 0.70661, -0.0673251)
+transform = Transform3D(0.999994, 0, -3.51719e-13, 0, 0.999986, 0, 1.1724e-13, 0, 1, 0.0978048, 0.673849, -0.0605367)
 operation = 2
-size = Vector3(0.435852, 0.993957, 0.16835)
+size = Vector3(0.435852, 1.05948, 0.218845)
 
 [node name="InteriorSubtract" type="CSGBox3D" parent="Body/BodyUnion"]
 transform = Transform3D(1, 0, 3.55271e-15, 0, 0.999988, 0, 3.55271e-15, 0, 0.853608, -0.197753, 0.720142, -0.505443)
@@ -226,23 +232,24 @@ operation = 2
 size = Vector3(0.533585, 0.371736, 1)
 
 [node name="CounterUnion" type="CSGBox3D" parent="Body/BodyUnion"]
-transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.925119, 0, 7.10543e-15, 0, 0.493625, -0.0610961, 0.383774, -0.84775)
+transform = Transform3D(0.999981, 0, -4.08562e-14, 0, 0.925114, 0, 1.13687e-13, 0, 0.493625, -0.0610961, 0.383774, -0.84775)
 size = Vector3(0.877808, 0.539795, 0.410645)
-
-[node name="CupboardDrawerSubtract1" type="CSGBox3D" parent="Body/BodyUnion"]
-transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.925087, 0, 1.42819e-12, 0, 0.493625, -0.356409, 1.11906, -0.74935)
-operation = 2
-size = Vector3(0.180649, 0.153244, 0.0119629)
+material = SubResource("StandardMaterial3D_13va2")
 
 [node name="CounterDrawerSubtract1" type="CSGBox3D" parent="Body/BodyUnion"]
-transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.925075, 0, 1.92557e-12, 0, 0.493625, -0.356409, 0.428069, -0.74935)
+transform = Transform3D(0.999984, 0, -1.22569e-13, 0, 0.925073, 0, 1.98241e-12, 0, 0.493625, -0.356409, 0.428069, -0.763179)
 operation = 2
-size = Vector3(0.180649, 0.317617, 0.0119629)
+size = Vector3(0.180649, 0.317617, 0.0679932)
 
 [node name="CounterDrawerSubtract3" type="CSGBox3D" parent="Body/BodyUnion"]
-transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.92507, 0, 2.1565e-12, 0, 0.493625, 0.197578, 0.428069, -0.74935)
+transform = Transform3D(0.999986, 0, -1.65201e-13, 0, 0.925069, 0, 2.18137e-12, 0, 0.493625, 0.197578, 0.428069, -0.768964)
 operation = 2
-size = Vector3(0.29882, 0.317617, 0.0119629)
+size = Vector3(0.29882, 0.317617, 0.0914307)
+
+[node name="CounterDrawerSubtract2" type="CSGBox3D" parent="Body/BodyUnion"]
+transform = Transform3D(0.999988, 0, -2.07834e-13, 0, 0.925058, 0, 2.66098e-12, 0, 0.493625, -0.110246, 0.348095, -0.74935)
+operation = 2
+size = Vector3(0.260124, 0.144712, 0.0119629)
 
 [node name="LeftWindowSubtract" type="CSGBox3D" parent="Body/BodyUnion"]
 transform = Transform3D(0.303596, 0.881404, 1.51526e-08, -0.952783, 0.280851, 2.07316e-08, 3.06983e-08, -3.88514e-08, 0.493625, 0.959318, 0.64403, -0.989715)
@@ -254,29 +261,30 @@ transform = Transform3D(0.303596, 0.881404, 1.51526e-08, -0.952783, 0.280851, 2.
 operation = 2
 size = Vector3(0.341793, 0.317617, 0.117004)
 
-[node name="CounterDrawerSubtract2" type="CSGBox3D" parent="Body/BodyUnion"]
-transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.925058, 0, 2.66098e-12, 0, 0.493625, -0.110246, 0.348095, -0.74935)
+[node name="CupboardDrawerSubtract1" type="CSGBox3D" parent="Body/BodyUnion"]
+transform = Transform3D(0.999985, 0, -1.38556e-13, 0, 0.925085, 0, 1.48148e-12, 0, 0.493625, -0.356409, 1.11906, -0.756656)
 operation = 2
-size = Vector3(0.260124, 0.144712, 0.0119629)
+size = Vector3(0.180649, 0.153244, 0.0543823)
 
 [node name="CupboardDrawerSubtract2" type="CSGBox3D" parent="Body/BodyUnion"]
-transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.925087, 0, 1.43174e-12, 0, 0.493625, -0.140686, 1.11906, -0.74935)
+transform = Transform3D(0.999984, 0, -1.08358e-13, 0, 0.925084, 0, 1.49214e-12, 0, 0.493625, -0.140686, 1.11906, -0.753804)
 operation = 2
-size = Vector3(0.180649, 0.153244, 0.0119629)
+size = Vector3(0.180649, 0.153244, 0.0363828)
 
 [node name="CupboardDrawerSubtract3" type="CSGBox3D" parent="Body/BodyUnion"]
-transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.925087, 0, 1.43174e-12, 0, 0.493625, 0.238884, 1.11906, -0.74935)
+transform = Transform3D(0.999985, 0, -1.45661e-13, 0, 0.925085, 0, 1.47438e-12, 0, 0.493625, 0.238884, 1.11906, -0.756656)
 operation = 2
-size = Vector3(0.180649, 0.153244, 0.0119629)
+size = Vector3(0.180649, 0.153244, 0.0618286)
 
 [node name="CupboardDrawerSubtract4" type="CSGBox3D" parent="Body/BodyUnion"]
-transform = Transform3D(0.999988, 0, -2.0961e-13, 0, 0.925083, 0, 1.59162e-12, 0, 0.493625, 0.0509454, 1.11906, -0.74935)
+transform = Transform3D(0.999986, 0, -1.63425e-13, 0, 0.925082, 0, 1.62359e-12, 0, 0.493625, 0.0509454, 1.11906, -0.755556)
 operation = 2
-size = Vector3(0.141106, 0.153244, 0.0119629)
+size = Vector3(0.141106, 0.153244, 0.0522461)
 
 [node name="CupboardUnion" type="CSGBox3D" parent="Body/BodyUnion"]
 transform = Transform3D(1, 0, -2.07834e-13, 0, 0.925132, 0, 3.55271e-15, 0, 0.493631, -0.0610961, 1.1329, -0.84775)
 size = Vector3(0.877808, 0.283813, 0.410645)
+material = SubResource("StandardMaterial3D_bt2id")
 
 [node name="SinkSubtract" type="CSGSphere3D" parent="Body/BodyUnion"]
 transform = Transform3D(1, 0, -4.26326e-14, 0, 0.999999, 0, 3.55271e-15, 0, 1, -0.116049, 0.634067, -0.834818)
@@ -294,5 +302,11 @@ spot_angle = 10.0
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.843, 0.723, 3.507)
 spot_range = 800.0
 spot_angle = 10.0
+
+[node name="DriverSeat" type="Node3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.747161, 1.2282, 1.7791)
+
+[node name="PassengerSeat" type="Node3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.747, 1.228, 1.779)
 
 [connection signal="body_entered" from="Body/EnterCarArea" to="Body" method="_on_enter_car_area_body_entered"]

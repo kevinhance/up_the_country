@@ -16,7 +16,6 @@ varying complexity using vehicle physics."
 config/tags=PackedStringArray("3d", "demo", "official", "physics", "vehicle")
 run/main_scene="res://Car Select/car_select.tscn"
 config/features=PackedStringArray("4.3")
-config/icon="res://icon.webp"
 
 [debug]
 

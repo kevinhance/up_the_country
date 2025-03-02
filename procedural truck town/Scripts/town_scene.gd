@@ -37,30 +37,7 @@ class Bounds:
 		# Calculate the squared distance between the point and the closest point on the bounding box
 		return closest_point.distance_squared_to(point)
 
-class TerrainChunk:
-	var mesh_object : MeshInstance3D
-	var position : Vector2
-	var bounds : Bounds
-	
-	func _init(coord : Vector2, size : int, parent : Node):
-		position = coord * size
-		bounds = Bounds.new(position, Vector2.ONE * size)
-		var position_v3 : Vector3 = Vector3(position.x, 0, position.y)
-		var mesh_object : MeshInstance3D = MeshInstance3D.new()
-		#create primitiveplane
-		#More to do hereee
-		mesh_object.reparent(parent)
-		set_visible(false)
-	
-	func update():
-		pass # and here!
-		
-	func set_visible(visible : bool):
-		pass # mesh object - set to visible
-		
-	func is_visible():
-		return false #TODO replace with "return meshObject.is_visible" or whatever
-		
+
 
 var mood := Mood.DAY: set = set_mood
 const max_view_dist : int = 300
@@ -89,7 +66,7 @@ func _process(delta):
 	player_pos = player.global_position
 	var player_2dpos_x = player_pos.x
 	var player_2dpos_y = player_pos.z
-	var viewer_pos_2d : Vector2 = Vector2(player_2dpos_x, player_2dpos_y)
+	viewer_pos_2d = Vector2(player_2dpos_x, player_2dpos_y)
 	update_visible_chunks()
 	
 func update_visible_chunks():
@@ -152,3 +129,28 @@ func set_mood(p_mood: Mood) -> void:
 			$WorldEnvironment.environment.sky.sky_material = preload("res://town/sky_night.tres")
 			$WorldEnvironment.environment.fog_light_color = Color(0.2, 0.149, 0.125)
 			$ArtificialLights.visible = true
+			
+class TerrainChunk:
+	var mesh_object : MeshInstance3D
+	var position : Vector2
+	var bounds : Bounds
+	
+	func _init(coord : Vector2, size : int, parent : Node):
+		position = coord * size
+		bounds = Bounds.new(position, Vector2.ONE * size)
+		var position_v3 : Vector3 = Vector3(position.x, 0, position.y)
+		var mesh_object : MeshInstance3D = MeshInstance3D.new()
+		#create primitiveplane
+		#More to do hereee
+		mesh_object.reparent(parent)
+		set_visible(false)
+	
+	func update_terrain_chunk():
+		var viewer_dst_from_nearest_edge = sqrt(bounds.sqr_distance(viewer_pos_2d))
+		
+	func set_visible(visible : bool):
+		pass # mesh object - set to visible
+		
+	func is_visible():
+		return false #TODO replace with "return meshObject.is_visible" or whatever
+		

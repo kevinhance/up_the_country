@@ -29,6 +29,13 @@ func _ready():
 	rng.seed = noise.seed
 	
 	generate()
+	
+func request_map_data(callback: Signal):
+	pass # idk if im setting it up right here
+	# are unity C# actions like godot signals?? idk 
+	
+func map_data_thread(callback : Signal):
+	pass
 
 func generate():
 	for i in get_children():
