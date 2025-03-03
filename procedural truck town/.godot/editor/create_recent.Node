@@ -1,9 +1,11 @@
+MeshInstance3D
+CollisionShape3D
+RigidBody3D
 Node3D
 SpotLight3D
 CSGSphere3D
 CSGBox3D
 CollisionPolygon3D
-CollisionShape3D
 CSGPolygon3D
 AudioStreamPlayer2D
 Label
@@ -11,4 +13,3 @@ TextEdit
 WorldEnvironment
 MultiMeshInstance3D
 Node
-MeshInstance3D

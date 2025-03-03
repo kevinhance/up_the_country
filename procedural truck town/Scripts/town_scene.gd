@@ -8,37 +8,6 @@ enum Mood {
 	MAX,
 }
 
-class Bounds:
-	var center: Vector2
-	var size: Vector2
-
-	func _init(center: Vector2, size: Vector2):
-		self.center = center
-		self.size = size
-
-	# Get the minimum and maximum extents of the bounding box
-	func get_min() -> Vector2:
-		return center - size / 2
-
-	func get_max() -> Vector2:
-		return center + size / 2
-
-	# Calculate the squared distance between a point and the bounding box
-	func sqr_distance(point: Vector2) -> float:
-		var min_extent = get_min()
-		var max_extent = get_max()
-		
-		# Clamp the point to the bounding box edges
-		var closest_point = Vector2(
-			clamp(point.x, min_extent.x, max_extent.x),
-			clamp(point.y, min_extent.y, max_extent.y)
-		)
-		
-		# Calculate the squared distance between the point and the closest point on the bounding box
-		return closest_point.distance_squared_to(point)
-
-
-
 var mood := Mood.DAY: set = set_mood
 const max_view_dist : int = 300
 var viewer : Transform3D
@@ -81,9 +50,9 @@ func update_visible_chunks():
 		while x_offset < chunks_visible_in_view_dist:
 			var viewed_chunk_coord: Vector2 = Vector2(x_current_chunk_coord + x_offset, y_current_chunk_coord + y_offset)
 			if chunk_dict.has(viewed_chunk_coord):
-				chunk_dict[viewed_chunk_coord].update()
+				chunk_dict[viewed_chunk_coord].update_terrain_chunk(viewer_pos_2d, max_view_dist)
 				if chunk_dict[viewed_chunk_coord].is_visible():
-					terrain_chunks_visible_last_update.add(chunk_dict[viewed_chunk_coord])
+					terrain_chunks_visible_last_update.append(chunk_dict[viewed_chunk_coord])
 			else:
 				chunk_dict[viewed_chunk_coord] = TerrainChunk.new(viewed_chunk_coord, chunk_size, Node.new()) #TODO should be passing in parent node, not just new node
 			x_offset += 1
@@ -131,26 +100,50 @@ func set_mood(p_mood: Mood) -> void:
 			$ArtificialLights.visible = true
 			
 class TerrainChunk:
-	var mesh_object : MeshInstance3D
-	var position : Vector2
-	var bounds : Bounds
-	
-	func _init(coord : Vector2, size : int, parent : Node):
+	var mesh_instance: MeshInstance2D  # Use MeshInstance3D for 3D
+	var position: Vector2
+	var bounds: Rect2  # Use AABB for 3D
+
+	func _init(coord: Vector2, size: int, parent: Node):
 		position = coord * size
-		bounds = Bounds.new(position, Vector2.ONE * size)
-		var position_v3 : Vector3 = Vector3(position.x, 0, position.y)
-		var mesh_object : MeshInstance3D = MeshInstance3D.new()
-		#create primitiveplane
-		#More to do hereee
-		mesh_object.reparent(parent)
+		bounds = Rect2(position, Vector2(size, size))
+
+		# Create a mesh (e.g., a PlaneMesh for 2D or a CubeMesh for 3D)
+		var mesh: PlaneMesh = PlaneMesh.new()
+		mesh.size = Vector2(size, size)
+
+		# Create a MeshInstance2D (or MeshInstance3D for 3D)
+		mesh_instance = MeshInstance2D.new()
+		mesh_instance.mesh = mesh
+		mesh_instance.position = position
+		mesh_instance.scale = Vector2(size / 10.0, size / 10.0)
+		parent.add_child(mesh_instance)
 		set_visible(false)
-	
-	func update_terrain_chunk():
-		var viewer_dst_from_nearest_edge = sqrt(bounds.sqr_distance(viewer_pos_2d))
 		
-	func set_visible(visible : bool):
-		pass # mesh object - set to visible
+	func on_map_data_received():
+		# pass in map_data : MapData
+		# then do mapGenerator.RequestMeshData(map_data, on_mesh_data_received) but in gdscript
+		pass
 		
-	func is_visible():
-		return false #TODO replace with "return meshObject.is_visible" or whatever
+	func on_mesh_data_received():
+		# pass in mesh_data : MeshData
+		# then do mesh_filter.mesh = mesh_data.CreateMesh()
+		pass
 		
+	func update_terrain_chunk(viewer_position: Vector2, max_view_distance: float):
+		var viewer_distance_from_nearest_edge: float = sqrt(distance_squared_to_rect(bounds, (viewer_position)))
+		var visible: bool = viewer_distance_from_nearest_edge <= max_view_distance
+		set_visible(visible)
+		
+	func set_visible(visible: bool):
+		mesh_instance.visible = visible
+		
+	func is_visible() -> bool:
+		return mesh_instance.visible
+		
+	func distance_squared_to_rect(rect: Rect2, point: Vector2) -> float:
+		var closest_x: float = clamp(point.x, rect.position.x, rect.position.x + rect.size.x)
+		var closest_y: float = clamp(point.y, rect.position.y, rect.position.y + rect.size.y)
+		var dx: float = point.x - closest_x
+		var dy: float = point.y - closest_y
+		return dx * dx + dy * dy

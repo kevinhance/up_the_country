@@ -1,6 +1,7 @@
 class_name TerrainGeneration
 extends Node
 
+signal request_map_data
 var mesh : MeshInstance3D
 var size_depth : int = 241
 var size_width : int = 241
@@ -25,16 +26,14 @@ func _ready():
 	var falloff_texture = preload("res://Procedural Generation/Textures/TerrainFalloff.png")
 	falloff_image = falloff_texture.get_image()
 	
+	var terrain_gen_node = get_node('../TerrainGeneration')
+	
 	noise.seed = randi()
 	rng.seed = noise.seed
 	
 	generate()
-	
-func request_map_data(callback: Signal):
-	pass # idk if im setting it up right here
-	# are unity C# actions like godot signals?? idk 
-	
-func map_data_thread(callback : Signal):
+
+func on_map_data_received():
 	pass
 
 func generate():
@@ -125,4 +124,7 @@ func spawn_objects(spawnable : SpawnableObject):
 		obj.position = random_pos
 		obj.scale = Vector3.ONE * rng.randf_range(spawnable.min_scale, spawnable.max_scale)
 		obj.rotation_degrees.y = rng.randf_range(0, 360)
+		
+class MapData:
+	var heightmap
 	
