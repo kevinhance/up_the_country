@@ -60,12 +60,12 @@ fog_sky_affect = 0.0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_boveq"]
 albedo_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Curve3D" id="Curve3D_0t3gn"]
+[sub_resource type="Curve3D" id="Curve3D_emyjj"]
 _data = {
-"points": PackedVector3Array(-14.245, -1.679, -10.294, 0, 0, 0, -29.925, 19.0738, -18.2966, 0, 0, 0, 0, 0, 0, -49.886, 20.2646, -18.7558),
-"tilts": PackedFloat32Array(0, 0)
+"points": PackedVector3Array(12.6851, -1.67892, -10.2937, 0, 0, 0, -28.8704, 18.8125, -19.3617, 0, 0, 0, 0, 0, 0, -32.3422, 20.1435, -21.449, 12.6851, -1.67892, -10.2937, -12.6851, 1.67892, 10.2937, -56.7037, 21.8351, -15.8325, 21.9114, -1.19016, -0.729061, 0, 0, 0, -85.4103, 21.6708, -11.5578),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
 }
-point_count = 2
+point_count = 4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i05b5"]
 albedo_texture = ExtResource("14_p0t6r")
@@ -290,7 +290,7 @@ use_collision = true
 
 [node name="Path3D" type="Path3D" parent="TownModel/MyRoad/CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.371674, 2.5197, 6.70978)
-curve = SubResource("Curve3D_0t3gn")
+curve = SubResource("Curve3D_emyjj")
 script = ExtResource("4_wh3hn")
 
 [node name="Road" type="CSGPolygon3D" parent="TownModel/MyRoad/CSGCombiner3D/Path3D"]
