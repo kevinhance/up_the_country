@@ -1,14 +1,14 @@
-[gd_scene load_steps=44 format=3 uid="uid://d0ygmqpylq0wy"]
+[gd_scene load_steps=43 format=3 uid="uid://d0ygmqpylq0wy"]
 
-[ext_resource type="Script" path="res://Scripts/town_scene.gd" id="1_gxe8p"]
-[ext_resource type="Script" path="res://Scripts/spedometer.gd" id="2"]
-[ext_resource type="Material" uid="uid://bpms6jemjgt36" path="res://Town/sky_day.tres" id="2_1df3w"]
-[ext_resource type="Script" path="res://Scripts/path_3d.gd" id="4_wh3hn"]
-[ext_resource type="Script" path="res://Scripts/TerrainGeneration.gd" id="5_kqndt"]
-[ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="6_ft7af"]
+[ext_resource type="Script" path="res://scripts/town_scene.gd" id="1_gxe8p"]
+[ext_resource type="Script" path="res://scripts/spedometer.gd" id="2"]
+[ext_resource type="Material" uid="uid://bpms6jemjgt36" path="res://town/sky_day.tres" id="2_1df3w"]
+[ext_resource type="Script" path="res://scripts/path_3d.gd" id="4_wh3hn"]
+[ext_resource type="Script" path="res://scripts/TerrainGeneration.gd" id="5_kqndt"]
+[ext_resource type="Script" path="res://scripts/PlayerController.gd" id="6_ft7af"]
 [ext_resource type="PackedScene" uid="uid://ccvmdhwmngbpt" path="res://Models/Rock/rock_01.tscn" id="6_o2lpw"]
-[ext_resource type="Script" path="res://Scripts/SpawnableObject.gd" id="6_tsmpm"]
-[ext_resource type="Script" path="res://Scripts/interaction_controller.gd" id="7_e1w54"]
+[ext_resource type="Script" path="res://scripts/SpawnableObject.gd" id="6_tsmpm"]
+[ext_resource type="Script" path="res://scripts/interaction_controller.gd" id="7_e1w54"]
 [ext_resource type="PackedScene" uid="uid://crlk3u335xyr6" path="res://Models/Rock/Rock.tscn" id="7_moois"]
 [ext_resource type="PackedScene" uid="uid://bahksvedkbifv" path="res://Models/Rock/rock_02.tscn" id="7_o0ku5"]
 [ext_resource type="PackedScene" uid="uid://dju443moxaprb" path="res://Models/Tree/Tree.tscn" id="8_3nc2c"]
@@ -16,11 +16,11 @@
 [ext_resource type="PackedScene" uid="uid://c01bgj54aixwa" path="res://Models/Rock/rock_04.tscn" id="9_c8ivq"]
 [ext_resource type="PackedScene" uid="uid://csqfd2byykx4t" path="res://Models/Rock/rock_05.tscn" id="10_fueea"]
 [ext_resource type="PackedScene" uid="uid://dmxxbquqdblj3" path="res://Models/Rock/rock_06.tscn" id="11_4knf8"]
-[ext_resource type="Texture2D" uid="uid://ch7el1rqm8u4p" path="res://Town/model/textures/road_texture.jpg" id="14_p0t6r"]
-[ext_resource type="Texture2D" uid="uid://j42e6fghic08" path="res://Town/model/textures/cement_lossy.webp" id="15_jct2a"]
+[ext_resource type="Texture2D" uid="uid://ch7el1rqm8u4p" path="res://town/model/textures/road_texture.jpg" id="14_p0t6r"]
+[ext_resource type="Texture2D" uid="uid://j42e6fghic08" path="res://town/model/textures/cement_lossy.webp" id="15_jct2a"]
 [ext_resource type="ArrayMesh" uid="uid://dsyrr7mlhvnu8" path="res://Models/Zsky/Modular_HousesPack/House_05/OBJ/House_05.obj" id="16_uh4ik"]
 [ext_resource type="ArrayMesh" uid="uid://b4gy0nsgtnw5t" path="res://Models/Zsky/Modular_HousesPack/House_04/OBJ/House_04.obj" id="17_tmhm6"]
-[ext_resource type="PackedScene" uid="uid://dwuft5c3fyh0x" path="res://Scenes/PickupObject.tscn" id="21_72pg8"]
+[ext_resource type="PackedScene" uid="uid://dwuft5c3fyh0x" path="res://scenes/PickupObject.tscn" id="21_72pg8"]
 [ext_resource type="Texture2D" uid="uid://dxkatpe85dcmi" path="res://inventory_icon.png" id="22_d1e8q"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_etcvh"]
@@ -59,13 +59,6 @@ fog_sky_affect = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_boveq"]
 albedo_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Curve3D" id="Curve3D_0t3gn"]
-_data = {
-"points": PackedVector3Array(-14.245, -1.679, -10.294, 0, 0, 0, -29.925, 19.0738, -18.2966, 0, 0, 0, 0, 0, 0, -49.886, 20.2646, -18.7558),
-"tilts": PackedFloat32Array(0, 0)
-}
-point_count = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i05b5"]
 albedo_texture = ExtResource("14_p0t6r")
@@ -290,7 +283,6 @@ use_collision = true
 
 [node name="Path3D" type="Path3D" parent="TownModel/MyRoad/CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.371674, 2.5197, 6.70978)
-curve = SubResource("Curve3D_0t3gn")
 script = ExtResource("4_wh3hn")
 
 [node name="Road" type="CSGPolygon3D" parent="TownModel/MyRoad/CSGCombiner3D/Path3D"]

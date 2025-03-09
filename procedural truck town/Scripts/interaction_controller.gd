@@ -3,7 +3,8 @@ extends RayCast3D
 @onready var interact_prompt_label : Label = get_node("InteractionPrompt")
 
 func _ready():
-	print(interact_prompt_label)
+	pass
+	#print(interact_prompt_label)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

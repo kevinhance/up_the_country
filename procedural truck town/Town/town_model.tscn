@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bimwahv7nmfr3"]
 
-[ext_resource type="Texture2D" uid="uid://csxl8xxs3vcm4" path="res://Town/model/textures/grass_lossy.webp" id="1_m7fol"]
+[ext_resource type="Texture2D" uid="uid://csxl8xxs3vcm4" path="res://town/model/textures/grass_lossy.webp" id="1_m7fol"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mpq7n"]
 albedo_color = Color(0.445812, 0.528883, 0.528876, 1)

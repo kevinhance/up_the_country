@@ -8,11 +8,11 @@ var smooth_factor : float = 10.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	curve_original = curve
+	curve_original = curve.duplicate()
 	fill_curve()
 
 func _exit_tree():
-	curve = curve_original
+	curve = curve_original.duplicate()
 	print("we set curve back")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

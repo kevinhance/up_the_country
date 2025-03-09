@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://06e35ocdyxgp"
-path="res://.godot/imported/trucktown2_rough1.mp3-7c7cd58a9e2181b34c2d3330da51f9b9.mp3str"
+path="res://.godot/imported/trucktown2_rough1.mp3-001acb7f9128368c560e81567b9e7668.mp3str"
 
 [deps]
 
-source_file="res://Sounds/Songs/trucktown2_rough1.mp3"
-dest_files=["res://.godot/imported/trucktown2_rough1.mp3-7c7cd58a9e2181b34c2d3330da51f9b9.mp3str"]
+source_file="res://sounds/Songs/trucktown2_rough1.mp3"
+dest_files=["res://.godot/imported/trucktown2_rough1.mp3-001acb7f9128368c560e81567b9e7668.mp3str"]
 
 [params]
 

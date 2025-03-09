@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2g4dq0w72e68"
-path="res://.godot/imported/grass.webp-a4e8e4edb8bd353607032fc3c705a681.ctex"
+path="res://.godot/imported/grass.webp-0ccf2a619a3f121234da585c8abbfdba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Town/materials/grass.webp"
-dest_files=["res://.godot/imported/grass.webp-a4e8e4edb8bd353607032fc3c705a681.ctex"]
+source_file="res://town/materials/grass.webp"
+dest_files=["res://.godot/imported/grass.webp-0ccf2a619a3f121234da585c8abbfdba.ctex"]
 
 [params]
 

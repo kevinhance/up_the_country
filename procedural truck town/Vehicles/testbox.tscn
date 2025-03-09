@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ckeaklinhydqa"]
 
-[ext_resource type="Material" uid="uid://cye5qu3rwkrsx" path="res://Vehicles/greenzone.tres" id="1_lfhyn"]
+[ext_resource type="Material" uid="uid://cye5qu3rwkrsx" path="res://vehicles/greenzone.tres" id="1_lfhyn"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3soy0"]
 

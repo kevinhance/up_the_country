@@ -1,4 +1,7 @@
-res://Town/town_scene.tscn
+res://vehicles/trailer_truck.tscn
 res://Procedural Generation/Materials/TerrainShader.tres
-res://Scripts/path_3d.gd
+res://scripts/path_3d.gd
 res://Car Select/car_select.tscn
+res://town/town_scene.tscn
+res://vehicles/car_base.tscn
+res://scripts/interaction_controller.gd
