@@ -1,10 +1,10 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1741423021
+::res://::1741477812
 icon.webp::CompressedTexture2D::1176772188801495316::1740775488::1740775516::1::::<><>::
 inventory_icon.png::CompressedTexture2D::8794283957947888320::1741074399::1741074426::1::::<><>::
 README.md::TextFile::-1::1738851795::0::1::::<><>::
-::res://Car Select/::1741338900
-car_select.tscn::PackedScene::5519083593120862163::1741338900::0::1::::<><>::res://Scripts/car_select.gd<>uid://bh7b4n4lg1uqt::::res://Car Select/choose_van.png<>uid://hvkcmpdq1t0k::::res://Car Select/choose_trailer.png<>uid://de7itkxhl0u28::::res://Car Select/choose_tow.png<>uid://dwmb5tbqoxmxx::::res://Sounds/Songs/trucktown_rough1.mp3
+::res://Car Select/::1741477547
+car_select.tscn::PackedScene::5519083593120862163::1741477547::0::1::::<><>::res://Scripts/car_select.gd<>uid://bh7b4n4lg1uqt::::res://Car Select/choose_van.png<>uid://hvkcmpdq1t0k::::res://Car Select/choose_trailer.png<>uid://de7itkxhl0u28::::res://Car Select/choose_tow.png<>uid://dwmb5tbqoxmxx::::res://Sounds/Songs/trucktown_rough1.mp3
 choose_tow.png::CompressedTexture2D::7506597740885427615::1738851795::1740723724::1::::<><>::
 choose_trailer.png::CompressedTexture2D::535285233427956760::1738851795::1740723724::1::::<><>::
 choose_van.png::CompressedTexture2D::2943915910416982227::1738851795::1740723724::1::::<><>::
@@ -52,8 +52,8 @@ Tress2D_01.obj::Mesh::7410983005533430584::1583877086::1740548738::1::::<><>::
 Vines.obj::Mesh::9061060185805699031::1583877112::1740548738::1::::<><>::
 Water_plant.obj::Mesh::2450179549760131261::1583877140::1740548738::1::::<><>::
 Wood_bridge.obj::Mesh::5495048062956767177::1583876982::1740548738::1::::<><>::
-::res://Models/Zsky/Environnement_AssetPack/Png/::1740773183
-Branches_01.png::CompressedTexture2D::6010953534558861827::1582841290::1740548730::1::::<><>::
+::res://Models/Zsky/Environnement_AssetPack/Png/::1741477812
+Branches_01.png::CompressedTexture2D::6010953534558861827::1582841290::1741477813::1::::<><>::
 Branches_02.png::CompressedTexture2D::134955875703003553::1582840996::1740548730::1::::<><>::
 Branches_treeNoleaf.png::CompressedTexture2D::2750221347610180732::1583627506::1740548730::1::::<><>::
 Cliff.png::CompressedTexture2D::5607934835354742291::1584233528::1740548730::1::::<><>::
@@ -137,7 +137,7 @@ Branch.png::CompressedTexture2D::7061272410738195589::1609290538::1740548767::1:
 Branch_Green.png::CompressedTexture2D::1529932279788139096::1609702136::1740548767::1::::<><>::
 ::res://Models/Zsky/Food_Pack01/::1740773184
 License.txt::TextFile::-1::1627697520::0::1::::<><>::
-::res://Models/Zsky/Food_Pack01/BLEND/::1740773184
+::res://Models/Zsky/Food_Pack01/BLEND/::1741477812
 Apple.blend::PackedScene::2995112995221961483::1634419264::1740548763::1::::<><>::
 Banana.blend::PackedScene::8165108490353411329::1634936870::1740548763::1::::<><>::
 Beer01.blend::PackedScene::4681316278748549540::1634621466::1740548763::1::::<><>::
@@ -538,9 +538,9 @@ TrashCan_02.obj::Mesh::3953979274481376174::1624663996::1740548735::1::::<><>::
 ::res://Player Controller/::1740966430
 ::res://Player Controller/Interaction/::1741069599
 ::res://Procedural Generation/::1740773186
-::res://Procedural Generation/Materials/::1741338900
+::res://Procedural Generation/Materials/::1741477544
 TerrainMaterial.tres::ShaderMaterial::5390377932146466924::1739394216::0::1::::<><>::uid://b8dq66dul8dn5::::res://Procedural Generation/Materials/TerrainShader.tres
-TerrainShader.tres::VisualShader::4709874122288641116::1741338900::0::1::::<><>::uid://dyo8fsrd02e38::::res://Procedural Generation/Textures/Grass.jpg<>uid://b026v82butmpl::::res://Procedural Generation/Textures/Stone.jpg
+TerrainShader.tres::VisualShader::4709874122288641116::1741477544::0::1::::<><>::uid://dyo8fsrd02e38::::res://Procedural Generation/Textures/Grass.jpg<>uid://b026v82butmpl::::res://Procedural Generation/Textures/Stone.jpg
 ::res://Procedural Generation/Textures/::1740773186
 Grass.jpg::CompressedTexture2D::8874709148532494193::1739394216::1740270856::1::::<><>::
 Stone.jpg::CompressedTexture2D::4198801477504485105::1739394216::1740270856::1::::<><>::
@@ -548,7 +548,7 @@ TerrainFalloff.png::CompressedTexture2D::7903450519739311615::1739394216::174027
 ::res://Scenes/::1741074474
 PickupObject.tscn::PackedScene::8745043261315175445::1741074474::0::1::::<><>::res://Scripts/pickup_object.gd
 Player.tscn::PackedScene::5178409782841226759::1741069599::0::1::::<><>::res://Player Controller/PlayerController.gd<>res://Scripts/InteractionController.gd
-::res://Scripts/::1741339526
+::res://Scripts/::1741477544
 car_select.gd::GDScript::-1::1740727003::0::1::::<>Control<>::
 EndlessTerrain.gd::GDScript::-1::1740530311::0::1::::EndlessTerrain<>Node3D<>::
 enter_car_area.gd::GDScript::-1::1740705279::0::1::::<>InteractableObject<>::
@@ -557,7 +557,7 @@ InteractableObject.gd::GDScript::-1::1739394216::0::1::::InteractableObject<>Nod
 interactable_object.gd::GDScript::-1::1740690678::0::1::::InteractableObject2<>Node3D<>::
 InteractionController.gd::GDScript::-1::1739394216::0::1::::<>RayCast3D<>::
 interaction_controller.gd::GDScript::-1::1740725615::0::1::::<>RayCast3D<>::
-path_3d.gd::GDScript::-1::1741339526::0::1::::<>Path3D<>::
+path_3d.gd::GDScript::-1::1741477544::0::1::::<>Path3D<>::
 pickup_object.gd::GDScript::-1::1740973649::0::1::::<>RigidBody3D<>::
 Player.gd::GDScript::-1::1739354162::0::1::::<>CharacterBody3D<>::
 PlayerController.gd::GDScript::-1::1740974592::0::1::::PlayerController<>CharacterBody3D<>::
@@ -577,13 +577,13 @@ impact_4.wav::AudioStreamWAV::8214202159646518848::1738851795::1740707328::1::::
 ::res://Sounds/Songs/::1740775254
 trucktown2_rough1.mp3::AudioStreamMP3::1819011268950681703::1740775246::1740775254::1::::<><>::
 trucktown_rough1.mp3::AudioStreamMP3::8728304435209697581::1740723405::1740723407::1::::<><>::
-::res://Town/::1741347553
+::res://Town/::1741477548
 sky_day.tres::ProceduralSkyMaterial::3465174616240032099::1738851795::0::1::::<><>::
 sky_morning.tres::ProceduralSkyMaterial::8392988130252087383::1738851795::0::1::::<><>::
 sky_night.tres::ProceduralSkyMaterial::6715213224306448988::1738851795::0::1::::<><>::
 sky_sunset.tres::ProceduralSkyMaterial::7268182449215338731::1738851795::0::1::::<><>::
 town_model.tscn::PackedScene::2974040141263067362::1740723750::0::1::::<><>::uid://csxl8xxs3vcm4::::res://Town/model/textures/grass_lossy.webp
-town_scene.tscn::PackedScene::8963914804262481880::1741347553::0::1::::<><>::res://Scripts/town_scene.gd<>res://Scripts/spedometer.gd<>uid://bpms6jemjgt36::::res://Town/sky_day.tres<>res://Scripts/path_3d.gd<>res://Scripts/TerrainGeneration.gd<>res://Scripts/PlayerController.gd<>uid://ccvmdhwmngbpt::::res://Models/Rock/rock_01.tscn<>res://Scripts/SpawnableObject.gd<>res://Scripts/interaction_controller.gd<>uid://crlk3u335xyr6::::res://Models/Rock/Rock.tscn<>uid://bahksvedkbifv::::res://Models/Rock/rock_02.tscn<>uid://dju443moxaprb::::res://Models/Tree/Tree.tscn<>uid://di8tg16tkho02::::res://Models/Rock/rock_03.tscn<>uid://c01bgj54aixwa::::res://Models/Rock/rock_04.tscn<>uid://csqfd2byykx4t::::res://Models/Rock/rock_05.tscn<>uid://dmxxbquqdblj3::::res://Models/Rock/rock_06.tscn<>uid://ch7el1rqm8u4p::::res://Town/model/textures/road_texture.jpg<>uid://j42e6fghic08::::res://Town/model/textures/cement_lossy.webp<>uid://dsyrr7mlhvnu8::::res://Models/Zsky/Modular_HousesPack/House_05/OBJ/House_05.obj<>uid://b4gy0nsgtnw5t::::res://Models/Zsky/Modular_HousesPack/House_04/OBJ/House_04.obj<>uid://dwuft5c3fyh0x::::res://Scenes/PickupObject.tscn<>uid://dxkatpe85dcmi::::res://inventory_icon.png
+town_scene.tscn::PackedScene::8963914804262481880::1741477548::0::1::::<><>::res://Scripts/town_scene.gd<>res://Scripts/spedometer.gd<>uid://bpms6jemjgt36::::res://Town/sky_day.tres<>res://Scripts/path_3d.gd<>res://Scripts/TerrainGeneration.gd<>res://Scripts/PlayerController.gd<>uid://ccvmdhwmngbpt::::res://Models/Rock/rock_01.tscn<>res://Scripts/SpawnableObject.gd<>res://Scripts/interaction_controller.gd<>uid://crlk3u335xyr6::::res://Models/Rock/Rock.tscn<>uid://bahksvedkbifv::::res://Models/Rock/rock_02.tscn<>uid://dju443moxaprb::::res://Models/Tree/Tree.tscn<>uid://di8tg16tkho02::::res://Models/Rock/rock_03.tscn<>uid://c01bgj54aixwa::::res://Models/Rock/rock_04.tscn<>uid://csqfd2byykx4t::::res://Models/Rock/rock_05.tscn<>uid://dmxxbquqdblj3::::res://Models/Rock/rock_06.tscn<>uid://ch7el1rqm8u4p::::res://Town/model/textures/road_texture.jpg<>uid://j42e6fghic08::::res://Town/model/textures/cement_lossy.webp<>uid://dsyrr7mlhvnu8::::res://Models/Zsky/Modular_HousesPack/House_05/OBJ/House_05.obj<>uid://b4gy0nsgtnw5t::::res://Models/Zsky/Modular_HousesPack/House_04/OBJ/House_04.obj<>uid://dwuft5c3fyh0x::::res://Scenes/PickupObject.tscn<>uid://dxkatpe85dcmi::::res://inventory_icon.png
 ::res://Town/materials/::1740773187
 cement.tres::StandardMaterial3D::2616088146665799013::1740723750::0::1::::<><>::uid://dkv00eeo3yu2w::::res://Town/materials/cement.webp
 cement.webp::CompressedTexture2D::7906065206908765244::1738851795::1740723754::1::::<><>::

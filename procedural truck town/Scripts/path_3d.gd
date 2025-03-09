@@ -4,7 +4,7 @@ extends Path3D
 var curve_original : Curve3D
 var random_offset_range: float = 1.0
 var num_points: int = 1000
-var smooth_factor : float = 10
+var smooth_factor : float = 10.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,11 +13,12 @@ func _ready():
 
 func _exit_tree():
 	curve = curve_original
+	print("we set curve back")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
 	# at some point, TODO have it spawn more points as we approach the edge of one
+	pass
 	
 func fill_curve():
 	var current_position : Vector3 = Vector3(0, 0, 0)
@@ -35,8 +36,7 @@ func fill_curve():
 		var random_offset: float = randf_range(-random_offset_range, random_offset_range)
 		current_position.x -= 30
 		current_position.z -= 15 * random_offset
-		#current_position.y += 5 * random_offset
-		print(current_position)
+		current_position.y += 5 * random_offset
 		in_pt = Vector3(0, 0, 0)
 		out_pt = in_pt
 		# Add the point to the curve
@@ -46,21 +46,19 @@ func fill_curve():
 
 	while(i < num_points-1):
 		var pt_prev = curve_dupe.get_point_position(i-1)
-		print(pt_prev)
 		var pt_focus = curve_dupe.get_point_position(i)
-		print(pt_focus)
 		var pt_next = curve_dupe.get_point_position(i+1)
-		print(pt_next)
 		
 		var controls = calculate_smooth_controls(pt_prev, pt_focus, pt_next, smooth_factor)
 		in_pt = controls[0]
 		out_pt = controls[1]
-		print(controls)
 		# Set the in and out control points for the middle point
 		curve_dupe.set_point_in(i, in_pt - pt_focus)  # in_pt is relative to pt_focus
 		curve_dupe.set_point_out(i, out_pt - pt_focus)  # out_pt is relative to pt_focus
 		i += 1
-	curve = curve_dupe	
+	curve = curve_dupe
+	
+
 func dupe_curve(existing_curve: Curve3D) -> Curve3D:
 	var new_curve = Curve3D.new()
 	for i in range(existing_curve.get_point_count()):
