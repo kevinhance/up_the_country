@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://v2d044fagyku"
-path.s3tc="res://.godot/imported/Branch_Green.png-8a6ac79a68c7ac3598782a81f9ccc2b3.s3tc.ctex"
-path.etc2="res://.godot/imported/Branch_Green.png-8a6ac79a68c7ac3598782a81f9ccc2b3.etc2.ctex"
+path.s3tc="res://.godot/imported/Branch_Green.png-bb84194678cde0712d22871ff9746250.s3tc.ctex"
+path.etc2="res://.godot/imported/Branch_Green.png-bb84194678cde0712d22871ff9746250.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Models/Zsky/Environoment Pack V.1/textures/Branch_Green.png"
-dest_files=["res://.godot/imported/Branch_Green.png-8a6ac79a68c7ac3598782a81f9ccc2b3.s3tc.ctex", "res://.godot/imported/Branch_Green.png-8a6ac79a68c7ac3598782a81f9ccc2b3.etc2.ctex"]
+source_file="res://Models/Zsky/Environoment Pack V.1/Textures/Branch_Green.png"
+dest_files=["res://.godot/imported/Branch_Green.png-bb84194678cde0712d22871ff9746250.s3tc.ctex", "res://.godot/imported/Branch_Green.png-bb84194678cde0712d22871ff9746250.etc2.ctex"]
 
 [params]
 

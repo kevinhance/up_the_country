@@ -9,7 +9,7 @@ enum Mood {
 }
 
 var mood := Mood.DAY: set = set_mood
-const max_view_dist : int = 300
+const max_view_dist : int = 450
 var viewer : Transform3D
 
 var viewer_pos_2d : Vector2
@@ -54,7 +54,7 @@ func update_visible_chunks():
 				if chunk_dict[viewed_chunk_coord].is_visible():
 					terrain_chunks_visible_last_update.append(chunk_dict[viewed_chunk_coord])
 			else:
-				chunk_dict[viewed_chunk_coord] = TerrainChunk.new(viewed_chunk_coord, chunk_size, Node.new()) #TODO should be passing in parent node, not just new node
+				chunk_dict[viewed_chunk_coord] = TerrainChunk.new(viewed_chunk_coord, chunk_size, $TownModel) #should be passing in parent node, not just new node
 			x_offset += 1
 		y_offset += 1
 

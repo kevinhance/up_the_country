@@ -1,14 +1,14 @@
-[gd_scene load_steps=43 format=3 uid="uid://d0ygmqpylq0wy"]
+[gd_scene load_steps=44 format=3 uid="uid://d0ygmqpylq0wy"]
 
-[ext_resource type="Script" path="res://scripts/town_scene.gd" id="1_gxe8p"]
-[ext_resource type="Script" path="res://scripts/spedometer.gd" id="2"]
+[ext_resource type="Script" uid="uid://c8oe1va3vboo3" path="res://scripts/town_scene.gd" id="1_gxe8p"]
+[ext_resource type="Script" uid="uid://c5o7r63shx2hm" path="res://scripts/spedometer.gd" id="2"]
 [ext_resource type="Material" uid="uid://bpms6jemjgt36" path="res://town/sky_day.tres" id="2_1df3w"]
-[ext_resource type="Script" path="res://scripts/path_3d.gd" id="4_wh3hn"]
-[ext_resource type="Script" path="res://scripts/TerrainGeneration.gd" id="5_kqndt"]
-[ext_resource type="Script" path="res://scripts/PlayerController.gd" id="6_ft7af"]
+[ext_resource type="Script" uid="uid://fkmt0cmnh6b" path="res://scripts/path_3d.gd" id="4_wh3hn"]
+[ext_resource type="Script" uid="uid://do8e6m2808m33" path="res://scripts/TerrainGeneration.gd" id="5_kqndt"]
+[ext_resource type="Script" uid="uid://bn4y8wxk2tolp" path="res://scripts/PlayerController.gd" id="6_ft7af"]
 [ext_resource type="PackedScene" uid="uid://ccvmdhwmngbpt" path="res://Models/Rock/rock_01.tscn" id="6_o2lpw"]
-[ext_resource type="Script" path="res://scripts/SpawnableObject.gd" id="6_tsmpm"]
-[ext_resource type="Script" path="res://scripts/interaction_controller.gd" id="7_e1w54"]
+[ext_resource type="Script" uid="uid://ci0vcpw8clwhb" path="res://scripts/SpawnableObject.gd" id="6_tsmpm"]
+[ext_resource type="Script" uid="uid://bxtkyke5v48ow" path="res://scripts/interaction_controller.gd" id="7_e1w54"]
 [ext_resource type="PackedScene" uid="uid://crlk3u335xyr6" path="res://Models/Rock/Rock.tscn" id="7_moois"]
 [ext_resource type="PackedScene" uid="uid://bahksvedkbifv" path="res://Models/Rock/rock_02.tscn" id="7_o0ku5"]
 [ext_resource type="PackedScene" uid="uid://dju443moxaprb" path="res://Models/Tree/Tree.tscn" id="8_3nc2c"]
@@ -39,7 +39,6 @@ albedo_color = Color(0, 0.329802, 0.329802, 1)
 roughness = 0.25
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_ar8se"]
-geometry_parsed_geometry_type = 2
 geometry_source_geometry_mode = 2
 
 [sub_resource type="Sky" id="Sky_1gf0c"]
@@ -59,6 +58,13 @@ fog_sky_affect = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_boveq"]
 albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Curve3D" id="Curve3D_x8mkd"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0)
+}
+point_count = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i05b5"]
 albedo_texture = ExtResource("14_p0t6r")
@@ -282,7 +288,8 @@ material_override = SubResource("StandardMaterial3D_boveq")
 use_collision = true
 
 [node name="Path3D" type="Path3D" parent="TownModel/MyRoad/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.371674, 2.5197, 6.70978)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5342, 23.0485, 5.77435)
+curve = SubResource("Curve3D_x8mkd")
 script = ExtResource("4_wh3hn")
 
 [node name="Road" type="CSGPolygon3D" parent="TownModel/MyRoad/CSGCombiner3D/Path3D"]
@@ -295,6 +302,7 @@ path_interval_type = 0
 path_interval = 1.0
 path_simplify_angle = 0.0
 path_rotation = 2
+path_rotation_accurate = false
 path_local = false
 path_continuous_u = true
 path_u_distance = 11.15
@@ -304,10 +312,10 @@ material = SubResource("StandardMaterial3D_i05b5")
 [node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="TownModel/MyRoad/CSGCombiner3D/Path3D"]
 
 [node name="CementSlab" type="CSGBox3D" parent="TownModel"]
-transform = Transform3D(25.0267, 0, 0, 0, 1, 0, 0, 0, 65.2318, -4.47244, 23.2275, -9.05991)
+transform = Transform3D(25.0267, 0, 0, 0, 1, 0, 0, 0, 65.2318, -4.47244, 23.2275, 3.55725)
 material_override = SubResource("StandardMaterial3D_t3cyc")
 use_collision = true
-size = Vector3(2.24744, 4.70459, 1)
+size = Vector3(2.24744, 4.70459, 1.38684)
 
 [node name="House05" type="MeshInstance3D" parent="TownModel"]
 transform = Transform3D(-0.609882, 0, -0.792492, 0, 1, 0, 0.792492, 0, -0.609882, 5.37987, 26.5888, -24.1835)

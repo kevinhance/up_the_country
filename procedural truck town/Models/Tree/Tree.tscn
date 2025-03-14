@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://dju443moxaprb"]
 
 [ext_resource type="ArrayMesh" uid="uid://cn1fag3jvwd8" path="res://Models/Tree/tree_obj.obj" id="1_s6snu"]
-[ext_resource type="Texture2D" path="res://Models/Tree/leaf04.dds" id="2_ytejx"]
-[ext_resource type="Texture2D" path="res://Models/Tree/leaf06.dds" id="3_35hie"]
+[ext_resource type="Texture2D" uid="uid://bqnw1aer7cpoo" path="res://Models/Tree/leaf04.dds" id="2_ytejx"]
+[ext_resource type="Texture2D" uid="uid://cwh3bhbhctbdx" path="res://Models/Tree/leaf06.dds" id="3_35hie"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ytqok"]
 transparency = 2

@@ -12,7 +12,7 @@ func _ready():
 	fill_curve()
 
 func _exit_tree():
-	curve = curve_original.duplicate()
+	curve = curve_original
 	print("we set curve back")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
