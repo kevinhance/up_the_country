@@ -1,21 +1,5 @@
 res://Car Select/car_select.tscn
-res://Models/Rock/Rock.tscn
-res://Models/Rock/rock_01.tscn
-res://Models/Rock/rock_02.tscn
-res://Models/Rock/rock_03.tscn
-res://Models/Rock/rock_04.tscn
-res://Models/Rock/rock_05.tscn
-res://Models/Rock/rock_06.tscn
-res://Models/Tree/Tree.tscn
-res://Models/smoothie_machine.tscn
-res://scenes/PickupObject.tscn
-res://scenes/Player.tscn
-res://town/town_model.tscn
-res://town/town_scene.tscn
-res://vehicles/car_base.tscn
-res://vehicles/car_base_revamp.tscn
-res://vehicles/rv_enlarged.tscn
-res://vehicles/testbox.tscn
-res://vehicles/tow_truck.tscn
-res://vehicles/trailer_truck.tscn
 res://Procedural Generation/Materials/TerrainShader.tres
+res://town/town_scene.tscn
+res://vehicles/trailer_truck.tscn
+res://vehicles/car_base.tscn
