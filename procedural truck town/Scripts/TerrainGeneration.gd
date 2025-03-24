@@ -7,7 +7,7 @@ var size_depth : int = 241
 var size_width : int = 241
 var mesh_resolution : int = 1
 var max_height : float = 70
-var use_falloff : bool = true
+var use_falloff : bool = false
 var lod : int = 0 # must be int value from 0 to and including 6
 
 @export var noise : FastNoiseLite
@@ -26,29 +26,36 @@ func _ready():
 	var falloff_texture = preload("res://Procedural Generation/Textures/TerrainFalloff.png")
 	falloff_image = falloff_texture.get_image()
 	
-	var terrain_gen_node = get_node('../TerrainGeneration')
+	#var terrain_gen_node = get_node('../TerrainGeneration')
 	
-	noise.seed = randi()
-	rng.seed = noise.seed
+	#noise.seed = randi()
+	#rng.seed = noise.seed
 	
-	generate()
+	#generate()
 
 func on_map_data_received():
 	pass
 
-func generate():
+func generate(seed):
+	noise.seed = seed
+	rng.seed = noise.seed
+	# populate our array of Spawnable Objects with each unique item
 	for i in get_children():
 		if i is SpawnableObject:
 			spawnable_objects.append(i)
+	# create new plane mesh w specified depth & width
 	var plane_mesh = PlaneMesh.new()
 	plane_mesh.size = Vector2(size_width, size_depth)
-	var meshSimpIncrmt : int # mesh simplification increment
+	# level of detail (lod) setup
+	var meshSimpIncrmt : int # mesh simplification increment must be per-chunk, not same for all chunks
 	if lod == 0:
 		meshSimpIncrmt = 1
 	else:
 		meshSimpIncrmt = lod * 2
+	# add verticies to mesh
 	plane_mesh.subdivide_depth = (size_depth - 1) / meshSimpIncrmt + 1
 	plane_mesh.subdivide_width = (size_width - 1) / meshSimpIncrmt + 1
+	# apply shader/material to mesh
 	plane_mesh.material = preload("res://Procedural Generation/Materials/TerrainMaterial.tres")
 	
 	var surface = SurfaceTool.new()
@@ -104,6 +111,8 @@ func get_noise_y(x, z) -> float:
 	
 	return adjusted_value * max_height * falloff
 	
+# function returns a Vec3 with a random x and z vals, bound by the size_depth and size_width values,
+# and with the y val set to the corresponding height of terrain at that point
 func get_random_pos() -> Vector3:
 	var x = rng.randf_range(-size_width / 2, size_width / 2)
 	var z = rng.randf_range(-size_depth / 2, size_depth / 2)

@@ -12,6 +12,7 @@ var mood := Mood.DAY: set = set_mood
 const max_view_dist : int = 10000 #450
 var viewer : Transform3D
 
+@export var seed : int = 10
 var viewer_pos_2d : Vector2
 var chunk_size : int = 240 # TerrainGeneration.map_chunk_size - 1 (verts vs segments btwn count)
 var chunks_visible_in_view_dist : int
@@ -33,6 +34,11 @@ func _ready():
 	print(player)
 	print("plyr_pos: ")
 	print(player_pos)
+	var terrain_gen_node = $TerrainGeneration
+	
+	
+	
+	terrain_gen_node.generate(seed)
 	
 
 
@@ -57,6 +63,7 @@ func update_visible_chunks():
 			var viewed_chunk_coord: Vector2 = Vector2(x_current_chunk_coord + x_offset, y_current_chunk_coord + y_offset)
 			if chunk_dict.has(viewed_chunk_coord):
 				chunk_dict[viewed_chunk_coord].update_terrain_chunk(viewer_pos_2d, max_view_dist)
+				print("if 1")
 				if chunk_dict[viewed_chunk_coord].is_visible():
 					terrain_chunks_visible_last_update.append(chunk_dict[viewed_chunk_coord])
 			else:
