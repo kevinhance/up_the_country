@@ -41,7 +41,6 @@ func _physics_process(delta):
 				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		if Input.is_action_just_pressed("pickup"):
 			var pickup_object = _get_nearby_pickup_object()
-			print(pickup_object)
 			if pickup_object:
 				pickup_object.pickup()
 				inventory.append(pickup_object)  # Add to inventory
@@ -100,7 +99,6 @@ func _get_nearby_pickup_object() -> RigidBody3D:
 	# Perform the raycast
 	var space_state = get_world_3d().direct_space_state
 	var result = space_state.intersect_ray(ray_params)
-	print(result)
 	# Check if the ray hit something and if it's a RigidBody3D
 	if result and result.collider is RigidBody3D:
 		return result.collider

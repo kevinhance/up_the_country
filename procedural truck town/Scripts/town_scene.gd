@@ -9,7 +9,7 @@ enum Mood {
 }
 
 var mood := Mood.DAY: set = set_mood
-const max_view_dist : int = 450
+const max_view_dist : int = 10000 #450
 var viewer : Transform3D
 
 var viewer_pos_2d : Vector2
@@ -27,6 +27,12 @@ func _ready():
 	chunks_visible_in_view_dist = roundi(max_view_dist / chunk_size)
 	player = $Player
 	player_pos = player.global_position
+	print("cvivd: ")
+	print(chunks_visible_in_view_dist)
+	print("plyr: ")
+	print(player)
+	print("plyr_pos: ")
+	print(player_pos)
 	
 
 
