@@ -33,9 +33,13 @@ func _ready():
 	#rng.seed = noise.seed
 	
 	#generate()
+	
 
 func on_map_data_received():
 	pass
+	
+func p_ch():
+	print(get_children())
 
 func generate(seed : int, chunk_coord : Vector2):
 	noise.seed = seed
@@ -87,8 +91,7 @@ func generate(seed : int, chunk_coord : Vector2):
 	mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	mesh.transform.origin = mesh.transform.origin + Vector3(chunk_coord.x * size, 0.0, chunk_coord.y * size)
 	mesh.add_to_group("NavSource")
-	
-	
+	mesh.name = "TerrainChunk_x" + str(int(chunk_coord.x)) + "_y" + str(int(chunk_coord.y))
 	add_child(mesh)
 	
 	water.position.y = water_level * max_height

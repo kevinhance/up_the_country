@@ -37,16 +37,117 @@ func _ready():
 	var terrain_gen_node = $TerrainGeneration
 	
 	
-	
 	terrain_gen_node.generate(seed, Vector2(0.0, 0.0))
+	
+	#terrain_gen_node.get_child(3, false).visible = false
+	var count1 : int = 0
+	var count2 : int = 0
+	for child in terrain_gen_node.get_children():
+		if child.name.contains('@Node3D@'):
+			count1 += 1
+		elif child.name.contains('TerrainChunk_x'):
+			count2 += 1
+	print('count1: ' + str(count1))
+	print('count2: ' + str(count2))
+	
 	terrain_gen_node.generate(seed, Vector2(1, 0))
+	
+	count1 = 0
+	count2 = 0
+	for child in terrain_gen_node.get_children():
+		if child.name.contains('@Node3D@'):
+			count1 += 1
+		elif child.name.contains('TerrainChunk_x'):
+			count2 += 1
+	print('count1: ' + str(count1))
+	print('count2: ' + str(count2))
+	
 	terrain_gen_node.generate(seed, Vector2(0, 1))
+	
+	count1 = 0
+	count2 = 0
+	for child in terrain_gen_node.get_children():
+		if child.name.contains('@Node3D@'):
+			count1 += 1
+		elif child.name.contains('TerrainChunk_x'):
+			count2 += 1
+	print('count1: ' + str(count1))
+	print('count2: ' + str(count2))
+	
 	terrain_gen_node.generate(seed, Vector2(1, 1))
+	
+	count1 = 0
+	count2 = 0
+	for child in terrain_gen_node.get_children():
+		if child.name.contains('@Node3D@'):
+			count1 += 1
+		elif child.name.contains('TerrainChunk_x'):
+			count2 += 1
+	print('count1: ' + str(count1))
+	print('count2: ' + str(count2))
+	
 	terrain_gen_node.generate(seed, Vector2(-1, 0))
+	
+	count1 = 0
+	count2 = 0
+	for child in terrain_gen_node.get_children():
+		if child.name.contains('@Node3D@'):
+			count1 += 1
+		elif child.name.contains('TerrainChunk_x'):
+			count2 += 1
+	print('count1: ' + str(count1))
+	print('count2: ' + str(count2))
+	
 	terrain_gen_node.generate(seed, Vector2(0, -1))
+	
+	count1 = 0
+	count2 = 0
+	for child in terrain_gen_node.get_children():
+		if child.name.contains('@Node3D@'):
+			count1 += 1
+		elif child.name.contains('TerrainChunk_x'):
+			count2 += 1
+	print('count1: ' + str(count1))
+	print('count2: ' + str(count2))
+	
 	terrain_gen_node.generate(seed, Vector2(-1, -1))
+	
+	count1 = 0
+	count2 = 0
+	for child in terrain_gen_node.get_children():
+		if child.name.contains('@Node3D@'):
+			count1 += 1
+		elif child.name.contains('TerrainChunk_x'):
+			count2 += 1
+	print('count1: ' + str(count1))
+	print('count2: ' + str(count2))
+	
 	terrain_gen_node.generate(seed, Vector2(1, -1))
+	
+	count1 = 0
+	count2 = 0
+	for child in terrain_gen_node.get_children():
+		if child.name.contains('@Node3D@'):
+			count1 += 1
+		elif child.name.contains('TerrainChunk_x'):
+			count2 += 1
+	print('count1: ' + str(count1))
+	print('count2: ' + str(count2))
+	
 	terrain_gen_node.generate(seed, Vector2(-1, 1))
+	
+	count1 = 0
+	count2 = 0
+	for child in terrain_gen_node.get_children():
+		if child.name.contains('@Node3D@'):
+			count1 += 1
+		elif child.name.contains('TerrainChunk_x'):
+			count2 += 1
+	print('count1: ' + str(count1))
+	print('count2: ' + str(count2))
+	
+	
+	
 	
 
 

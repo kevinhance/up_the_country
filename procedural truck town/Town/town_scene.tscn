@@ -25,13 +25,12 @@
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_etcvh"]
 noise_type = 0
-seed = 7
 frequency = 0.0061
 offset = Vector3(62.5, 0, 0)
 
 [sub_resource type="Curve" id="Curve_icv28"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.302857, 0.641622), -7.37835, -7.37835, 0, 0, Vector2(0.782857, 0.515135), 0.850183, 0.850183, 0, 0, Vector2(1, 1), 6.49232, 0.0, 0, 0]
-point_count = 4
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.831429, 0.510124), 1.64471, 1.64471, 0, 0, Vector2(1, 1), 6.49232, 0.0, 0, 0]
+point_count = 3
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_xs5hc"]
 
