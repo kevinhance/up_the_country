@@ -5,6 +5,7 @@ signal request_map_data
 var mesh : MeshInstance3D
 var size_depth : int = 241
 var size_width : int = 241
+var size : int = 241
 var mesh_resolution : int = 1
 var max_height : float = 70
 var use_falloff : bool = false
@@ -36,9 +37,11 @@ func _ready():
 func on_map_data_received():
 	pass
 
-func generate(seed):
+func generate(seed : int, chunk_coord : Vector2):
 	noise.seed = seed
 	rng.seed = noise.seed
+	noise.offset.x = chunk_coord.x * size
+	noise.offset.y = chunk_coord.y * size
 	# populate our array of Spawnable Objects with each unique item
 	for i in get_children():
 		if i is SpawnableObject:
@@ -82,13 +85,16 @@ func generate(seed):
 	mesh.mesh = surface.commit()
 	mesh.create_trimesh_collision()
 	mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	mesh.transform.origin = mesh.transform.origin + Vector3(chunk_coord.x * size, 0.0, chunk_coord.y * size)
 	mesh.add_to_group("NavSource")
+	
+	
 	add_child(mesh)
 	
 	water.position.y = water_level * max_height
 	
 	for i in spawnable_objects:
-		spawn_objects(i)
+		spawn_objects(i, chunk_coord)
 		
 	nav_region.bake_navigation_mesh()
 	await nav_region.bake_finished
@@ -119,7 +125,7 @@ func get_random_pos() -> Vector3:
 	var y = get_noise_y(x, z)
 	return Vector3(x, y, z)
 	
-func spawn_objects(spawnable : SpawnableObject):
+func spawn_objects(spawnable : SpawnableObject, chunk_coord : Vector2):
 	for i in range(spawnable.spawn_count):
 		var obj = spawnable.scenes_to_spawn[rng.randi() % spawnable.scenes_to_spawn.size()].instantiate()
 		obj.add_to_group("NavSource")
@@ -130,7 +136,7 @@ func spawn_objects(spawnable : SpawnableObject):
 		while random_pos.y < water_level * max_height:
 			random_pos = get_random_pos()
 		
-		obj.position = random_pos
+		obj.position = random_pos + Vector3(chunk_coord.x * size, 0.0, chunk_coord.y * size)
 		obj.scale = Vector3.ONE * rng.randf_range(spawnable.min_scale, spawnable.max_scale)
 		obj.rotation_degrees.y = rng.randf_range(0, 360)
 		

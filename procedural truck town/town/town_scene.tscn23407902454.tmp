@@ -27,10 +27,10 @@
 noise_type = 0
 seed = 7
 frequency = 0.0061
-offset = Vector3(62.5, 0, 0)
+offset = Vector3(-54.05, 0, 0)
 
 [sub_resource type="Curve" id="Curve_icv28"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.302857, 0.641622), -7.37835, -7.37835, 0, 0, Vector2(0.782857, 0.515135), 0.850183, 0.850183, 0, 0, Vector2(1, 1), 6.49232, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.303318, 0.0879121), 0.869505, 0.869505, 0, 0, Vector2(0.78673, 0.43956), 0.850183, 0.850183, 0, 0, Vector2(1, 1), 6.49232, 0.0, 0, 0]
 point_count = 4
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_xs5hc"]
@@ -62,10 +62,10 @@ albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Curve3D" id="Curve3D_x8mkd"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -9.25378, -21.072, 0, 0, 0, 0, -19.792, 3.18611, -14.8482, -70.7632, -19.1886, -10.3238),
-"tilts": PackedFloat32Array(0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0)
 }
-point_count = 2
+point_count = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i05b5"]
 albedo_texture = ExtResource("14_p0t6r")
@@ -289,7 +289,7 @@ material_override = SubResource("StandardMaterial3D_boveq")
 use_collision = true
 
 [node name="Path3D" type="Path3D" parent="TownModel/MyRoad/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9302, 23.1455, 5.77435)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5342, 23.0485, 5.77435)
 curve = SubResource("Curve3D_x8mkd")
 script = ExtResource("4_wh3hn")
 

@@ -4,3 +4,6 @@ res://scripts/town_scene.gd
 res://Car Select/car_select.tscn
 res://vehicles/trailer_truck.tscn
 res://vehicles/car_base.tscn
+res://scripts/path_3d.gd
+res://scripts/TerrainGeneration.gd
+res://scripts/SpawnableObject.gd

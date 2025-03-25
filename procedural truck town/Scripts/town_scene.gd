@@ -9,10 +9,10 @@ enum Mood {
 }
 
 var mood := Mood.DAY: set = set_mood
-const max_view_dist : int = 10000 #450
+const max_view_dist : int = 1000 #450
 var viewer : Transform3D
 
-@export var seed : int = 10
+@export var seed : int = 9
 var viewer_pos_2d : Vector2
 var chunk_size : int = 240 # TerrainGeneration.map_chunk_size - 1 (verts vs segments btwn count)
 var chunks_visible_in_view_dist : int
@@ -38,7 +38,15 @@ func _ready():
 	
 	
 	
-	terrain_gen_node.generate(seed)
+	terrain_gen_node.generate(seed, Vector2(0.0, 0.0))
+	terrain_gen_node.generate(seed, Vector2(1, 0))
+	terrain_gen_node.generate(seed, Vector2(0, 1))
+	terrain_gen_node.generate(seed, Vector2(1, 1))
+	terrain_gen_node.generate(seed, Vector2(-1, 0))
+	terrain_gen_node.generate(seed, Vector2(0, -1))
+	terrain_gen_node.generate(seed, Vector2(-1, -1))
+	terrain_gen_node.generate(seed, Vector2(1, -1))
+	terrain_gen_node.generate(seed, Vector2(-1, 1))
 	
 
 

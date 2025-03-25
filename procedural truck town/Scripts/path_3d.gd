@@ -3,28 +3,30 @@
 extends Path3D
 var curve_original : Curve3D
 var random_offset_range: float = 1.0
-var num_points: int = 1000
+var num_points: int = 10
 var smooth_factor : float = 10.0
+var seed : int = 10
+@onready var rng : RandomNumberGenerator = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	curve_original = curve.duplicate()
-	fill_curve()
+	fill_curve(seed)
 
 func _exit_tree():
 	curve = curve_original
-	print("we set curve back")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	# at some point, TODO have it spawn more points as we approach the edge of one
 	pass
 	
-func fill_curve():
+func fill_curve(seed : int):
 	var current_position : Vector3 = Vector3(0, 0, 0)
 	var curve_dupe : Curve3D = curve.duplicate() #dupe_curve(curve)
 	var in_pt
 	var out_pt
+	rng.seed = seed
 	# Check if the curve already has points
 	if curve_dupe.point_count > 0:
 		# Grab the position of the final point in the curve
@@ -33,7 +35,7 @@ func fill_curve():
 		# If the curve is empty, start at the origin
 		current_position = Vector3(0, 0, 0)
 	for i in range(num_points):
-		var random_offset: float = randf_range(-random_offset_range, random_offset_range)
+		var random_offset: float = rng.randf_range(-random_offset_range, random_offset_range)
 		current_position.x -= 30
 		current_position.z -= 15 * random_offset
 		current_position.y += 5 * random_offset
@@ -59,15 +61,6 @@ func fill_curve():
 	curve = curve_dupe
 	
 
-func dupe_curve(existing_curve: Curve3D) -> Curve3D:
-	var new_curve = Curve3D.new()
-	for i in range(existing_curve.get_point_count()):
-		var point_position = existing_curve.get_point_position(i)
-		var in_position = existing_curve.get_point_in(i)
-		var out_position = existing_curve.get_point_out(i)
-		var tilt = existing_curve.get_point_tilt(i)
-		new_curve.add_point(point_position, in_position, out_position, tilt)
-	return new_curve
 
 
 func calculate_smooth_controls(pt_prev: Vector3, pt_focus: Vector3, pt_next: Vector3, scale: float) -> Array:
