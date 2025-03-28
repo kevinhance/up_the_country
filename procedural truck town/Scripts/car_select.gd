@@ -15,7 +15,7 @@ func _process(_delta: float) -> void:
 func _load_scene(car_scene: PackedScene) -> void:
 	var car: Node3D = car_scene.instantiate()
 	car.name = "car"
-	town = preload("res://town/town_scene.tscn").instantiate()
+	town = preload("res://scenes/town_scene.tscn").instantiate()
 	if $PanelContainer/MarginContainer/HBoxContainer/Sunrise.button_pressed:
 		town.mood = town.Mood.SUNRISE
 	elif $PanelContainer/MarginContainer/HBoxContainer/Day.button_pressed:
@@ -45,12 +45,12 @@ func _on_back_pressed() -> void:
 
 
 func _on_mini_van_pressed() -> void:
-	_load_scene(preload("res://vehicles/rv_enlarged.tscn"))
+	_load_scene(preload("res://scenes/rv_enlarged.tscn"))
 
 
 func _on_trailer_truck_pressed() -> void:
-	_load_scene(preload("res://vehicles/trailer_truck.tscn"))
+	_load_scene(preload("res://scenes/trailer_truck.tscn"))
 
 
 func _on_tow_truck_pressed() -> void:
-	_load_scene(preload("res://vehicles/tow_truck.tscn"))
+	_load_scene(preload("res://scenes/tow_truck.tscn"))

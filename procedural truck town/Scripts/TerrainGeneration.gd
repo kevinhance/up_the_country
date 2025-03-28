@@ -9,7 +9,6 @@ var size : int = 241
 var mesh_resolution : int = 1
 var max_height : float = 70
 var use_falloff : bool = false
-var lod : int = 0 # must be int value from 0 to and including 6
 
 @export var noise : FastNoiseLite
 @export var elevation_curve : Curve
@@ -41,7 +40,11 @@ func on_map_data_received():
 func p_ch():
 	print(get_children())
 
-func generate(seed : int, chunk_coord : Vector2):
+func generate(seed : int, chunk_coord : Vector2, lod : int):
+	if lod < 0:
+		lod = 0
+	elif lod > 6:
+		lod = 6
 	noise.seed = seed
 	rng.seed = noise.seed
 	noise.offset.x = chunk_coord.x * size

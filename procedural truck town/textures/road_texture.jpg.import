@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgg05fddt6npy"
-path.s3tc="res://.godot/imported/Road.png-68f3c06154c309403c6c0b1b4c77b6e6.s3tc.ctex"
-path.etc2="res://.godot/imported/Road.png-68f3c06154c309403c6c0b1b4c77b6e6.etc2.ctex"
+uid="uid://ch7el1rqm8u4p"
+path.s3tc="res://.godot/imported/road_texture.jpg-75fdf9bd5f87b3e3c0e5a80a16161d58.s3tc.ctex"
+path.etc2="res://.godot/imported/road_texture.jpg-75fdf9bd5f87b3e3c0e5a80a16161d58.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://town/model/textures/Road.png"
-dest_files=["res://.godot/imported/Road.png-68f3c06154c309403c6c0b1b4c77b6e6.s3tc.ctex", "res://.godot/imported/Road.png-68f3c06154c309403c6c0b1b4c77b6e6.etc2.ctex"]
+source_file="res://textures/road_texture.jpg"
+dest_files=["res://.godot/imported/road_texture.jpg-75fdf9bd5f87b3e3c0e5a80a16161d58.s3tc.ctex", "res://.godot/imported/road_texture.jpg-75fdf9bd5f87b3e3c0e5a80a16161d58.etc2.ctex"]
 
 [params]
 

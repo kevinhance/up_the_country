@@ -1,8 +1,7 @@
-res://town/town_scene.tscn
-res://Procedural Generation/Materials/TerrainShader.tres
-res://scripts/TerrainGeneration.gd
 res://Car Select/car_select.tscn
-res://vehicles/trailer_truck.tscn
-res://vehicles/car_base.tscn
+res://Procedural Generation/Materials/TerrainShader.tres
+res://scenes/town_scene.tscn
+res://scripts/car_select.gd
+res://scenes/car_select.tscn
+res://scripts/TerrainGeneration.gd
 res://scripts/town_scene.gd
-res://scripts/SpawnableObject.gd

@@ -14,7 +14,7 @@ config/name="Up the Country | Procedural Truck Town"
 config/description="This is a demo implementing different types of trucks of
 varying complexity using vehicle physics."
 config/tags=PackedStringArray("3d", "demo", "official", "physics", "vehicle")
-run/main_scene="res://Car Select/car_select.tscn"
+run/main_scene="res://scenes/car_select.tscn"
 config/features=PackedStringArray("4.4")
 
 [debug]

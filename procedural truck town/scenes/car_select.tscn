@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://ckvqraq6j1okh"]
 
-[ext_resource type="Script" uid="uid://bvhu8uqjpckmb" path="res://scripts/car_select.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://bh7b4n4lg1uqt" path="res://Car Select/choose_van.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://hvkcmpdq1t0k" path="res://Car Select/choose_trailer.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://de7itkxhl0u28" path="res://Car Select/choose_tow.png" id="4"]
-[ext_resource type="AudioStream" uid="uid://dwmb5tbqoxmxx" path="res://sounds/Songs/trucktown_rough1.mp3" id="5_jettm"]
+[ext_resource type="Script" uid="uid://bvhu8uqjpckmb" path="res://scripts/car_select.gd" id="1_wj4ei"]
+[ext_resource type="Texture2D" uid="uid://bh7b4n4lg1uqt" path="res://Car Select/choose_van.png" id="2_xf4j5"]
+[ext_resource type="Texture2D" uid="uid://hvkcmpdq1t0k" path="res://Car Select/choose_trailer.png" id="3_wol1q"]
+[ext_resource type="Texture2D" uid="uid://de7itkxhl0u28" path="res://Car Select/choose_tow.png" id="4_ncmrg"]
+[ext_resource type="AudioStream" uid="uid://dwmb5tbqoxmxx" path="res://sounds/Songs/trucktown_rough1.mp3" id="5_wvot5"]
 
 [sub_resource type="FontVariation" id="FontVariation_hqcvw"]
 variation_embolden = 1.0
@@ -36,7 +36,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 2
 size_flags_vertical = 2
-script = ExtResource("1")
+script = ExtResource("1_wj4ei")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
@@ -51,19 +51,19 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-icon = ExtResource("2")
+icon = ExtResource("2_xf4j5")
 
 [node name="TrailerTruck" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-icon = ExtResource("3")
+icon = ExtResource("3_wol1q")
 
 [node name="TowTruck" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-icon = ExtResource("4")
+icon = ExtResource("4_ncmrg")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -150,7 +150,7 @@ thank you to zsky2000 for assets (https://www.patreon.com/Zsky)"
 label_settings = SubResource("LabelSettings_qdfyi")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_jettm")
+stream = ExtResource("5_wvot5")
 parameters/looping = true
 
 [connection signal="pressed" from="HBoxContainer/MiniVan" to="." method="_on_mini_van_pressed"]
