@@ -41,10 +41,10 @@ func _physics_process(delta):
 				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		if Input.is_action_just_pressed("pickup"):
 			var pickup_object = _get_nearby_pickup_object()
-			if pickup_object:
-				pickup_object.pickup()
-				inventory.append(pickup_object)  # Add to inventory
-		if Input.is_action_just_pressed("drop"):
+			#if pickup_object:
+			#	pickup_object.pickup()
+			#	inventory.append(pickup_object)  # Add to inventory
+		elif Input.is_action_just_pressed("drop"):
 			drop_item()
 		
 		# move WASD

@@ -1,7 +1,2 @@
-res://Car Select/car_select.tscn
-res://Procedural Generation/Materials/TerrainShader.tres
 res://scenes/town_scene.tscn
-res://scripts/car_select.gd
-res://scenes/car_select.tscn
-res://scripts/TerrainGeneration.gd
-res://scripts/town_scene.gd
+res://Procedural Generation/Materials/TerrainShader.tres

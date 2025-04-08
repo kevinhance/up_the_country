@@ -18,6 +18,10 @@ var chunk_size : int = 240 # TerrainGeneration.map_chunk_size - 1 (verts vs segm
 var chunks_visible_in_view_dist : int
 var player : Node3D
 var player_pos : Vector3
+var delta_ct : float = 0
+var car # idk how to neatly access car position like speedometer did w speed
+var radius : int = 2
+var origin : Vector2 = Vector2(0,0)
 var chunk_dict = {
 	#Vector2, TerrainChunk as key and value
 }
@@ -28,25 +32,23 @@ func _ready():
 	chunks_visible_in_view_dist = roundi(max_view_dist / chunk_size)
 	player = $Player
 	player_pos = player.global_position
-	print("cvivd: ")
-	print(chunks_visible_in_view_dist)
-	print("plyr: ")
-	print(player)
-	print("plyr_pos: ")
-	print(player_pos)
 	var terrain_gen_node = $TerrainGeneration
 	
 	
-	
-	for i in range(-3, 4):
-		for j in range(-3, 4):
+	var radius : int = 2
+	var origin : Vector2 = Vector2(0,0)
+	for i in range(-radius + origin.x, radius+1 + origin.x): # x axis i think
+		for j in range(-radius + origin.y, radius+1 + origin.y): # y axis i think
 			var lod : int = 0
 			if(abs(i) > 1 or abs(j) > 1):
-				lod = 6
+				lod = 0
 			elif(abs(i) > 0 or abs(j) > 0):
-				lod = 3
+				lod = 0
+			chunk_dict[Vector2(i, j)] = true
+			terrain_chunks_visible_last_update.append(Vector2(i,j))
 			terrain_gen_node.generate(seed, Vector2(i,j), lod)	
-
+	print(get_children())
+	car = $InstancePos/car.get_child(0)
 	
 	
 	
@@ -56,31 +58,64 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	player_pos = player.global_position
-	var player_2dpos_x = player_pos.x
-	var player_2dpos_y = player_pos.z
-	viewer_pos_2d = Vector2(player_2dpos_x, player_2dpos_y)
-	update_visible_chunks()
+	#player_pos = player.global_position
+	var car_pos = car.global_position
+	var player_2dpos_x = car_pos.x
+	var player_2dpos_y = car_pos.z
 	
-func update_visible_chunks():
-	for i in range(len(terrain_chunks_visible_last_update)):
-		terrain_chunks_visible_last_update[i].set_visible(false)
-	terrain_chunks_visible_last_update
-	var x_current_chunk_coord : int = int(viewer_pos_2d.x / chunk_size) 
-	var y_current_chunk_coord : int = int(viewer_pos_2d.y / chunk_size)
-	var y_offset = -chunks_visible_in_view_dist
-	var x_offset = -chunks_visible_in_view_dist
-	while y_offset < chunks_visible_in_view_dist:
-		while x_offset < chunks_visible_in_view_dist:
-			var viewed_chunk_coord: Vector2 = Vector2(x_current_chunk_coord + x_offset, y_current_chunk_coord + y_offset)
+	viewer_pos_2d = Vector2(player_2dpos_x, player_2dpos_y)
+	update_visible_chunks(delta)
+	
+func update_visible_chunks(delta):
+	#for i in range(len(terrain_chunks_visible_last_update)):
+	#	terrain_chunks_visible_last_update[i].set_visible(false)
+	
+	
+	var x_current_chunk_coord : int = int((viewer_pos_2d.x - 120)/ chunk_size) 
+	var y_current_chunk_coord : int = int((viewer_pos_2d.y - 120)/ chunk_size)
+	delta_ct += delta
+	if delta_ct > 1:
+		print("x is " + str(x_current_chunk_coord))
+		print("y is " + str(y_current_chunk_coord))
+		delta_ct = 0
+		print(terrain_chunks_visible_last_update)
+		
+	for elem in range(len(terrain_chunks_visible_last_update)):
+	#	.set_visible(false)
+		if not chunk_dict.has(terrain_chunks_visible_last_update[elem]):
+			print("New: " + str(elem) + ",  " + str(terrain_chunks_visible_last_update[elem]))
+	# so we are tracking our Chunk Coord (i think) and can make an initial list
+		
+	#var y_offset = -chunks_visible_in_view_dist
+	#var x_offset = -chunks_visible_in_view_dist
+	#while y_offset < chunks_visible_in_view_dist:
+	#	while x_offset < chunks_visible_in_view_dist:
+	#		var viewed_chunk_coord: Vector2 = Vector2(x_current_chunk_coord + x_offset, y_current_chunk_coord + y_offset)
+	#		if chunk_dict.has(viewed_chunk_coord):
+	#			chunk_dict[viewed_chunk_coord].update_terrain_chunk(viewer_pos_2d, max_view_dist)
+	#			if chunk_dict[viewed_chunk_coord].is_visible():
+	#				terrain_chunks_visible_last_update.append(chunk_dict[viewed_chunk_coord])
+	#		else:
+	#			chunk_dict[viewed_chunk_coord] = TerrainChunk.new(viewed_chunk_coord, chunk_size, $TownModel) #should be passing in parent node, not just new node
+	#		x_offset += 1
+	#	y_offset += 1
+	var terrain_gen_node = $TerrainGeneration
+	var radius : int = 3
+	var origin : Vector2 = Vector2(x_current_chunk_coord, y_current_chunk_coord)
+	for i in range(-radius + origin.x, radius+1 + origin.x): # x axis i think
+		for j in range(-radius + origin.y, radius+1 + origin.y): # y axis i think
+			var viewed_chunk_coord: Vector2 = Vector2(i, j)
 			if chunk_dict.has(viewed_chunk_coord):
-				chunk_dict[viewed_chunk_coord].update_terrain_chunk(viewer_pos_2d, max_view_dist)
-				if chunk_dict[viewed_chunk_coord].is_visible():
-					terrain_chunks_visible_last_update.append(chunk_dict[viewed_chunk_coord])
+				pass
 			else:
-				chunk_dict[viewed_chunk_coord] = TerrainChunk.new(viewed_chunk_coord, chunk_size, $TownModel) #should be passing in parent node, not just new node
-			x_offset += 1
-		y_offset += 1
+				chunk_dict[viewed_chunk_coord] = Vector2(x_current_chunk_coord, y_current_chunk_coord)
+			var lod : int = 0
+			if(abs(i) > 1 or abs(j) > 1):
+				lod = 3
+			elif(abs(i) > 0 or abs(j) > 0):
+				lod = 6
+			terrain_gen_node.generate(seed, Vector2(i,j), lod)
+	#print(len(chunk_dict))
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"cycle_mood"):

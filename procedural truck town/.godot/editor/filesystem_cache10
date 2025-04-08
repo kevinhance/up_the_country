@@ -1,19 +1,14 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1743126553
+::res://::1744077405
 icon.webp::CompressedTexture2D/CompressedTexture2D::1176772188801495316::1740775488::1741924222::1::::<><><>0<>0<>8cd1f9222368cca14a1511e57f5581df<>res://.godot/imported/icon.webp-e94f9a68b0f625a567a797079e4d325f.ctex::
 inventory_icon.png::CompressedTexture2D/CompressedTexture2D::8794283957947888320::1741074399::1741924222::1::::<><><>0<>0<>4c4c7b11a1a3fd8696b540ebcdc75424<>res://.godot/imported/inventory_icon.png-bc839063299ff5168219eb872db3ecda.ctex::
 README.md::TextFile/TextFile::-1::1738851795::0::1::::<><><>0<>0<><>::
-::res://Car Select/::1743126312
+::res://Car Select/::1743126895
 choose_tow.png::CompressedTexture2D/CompressedTexture2D::7506597740885427615::1738851795::1741924222::1::::<><><>0<>0<>e8239b027fc960dbaaf2f855aaa0293f<>res://.godot/imported/choose_tow.png-f6f14a748ff3e4a2348f377d84811ee8.ctex::
 choose_trailer.png::CompressedTexture2D/CompressedTexture2D::535285233427956760::1738851795::1741924222::1::::<><><>0<>0<>ebd9e48625af5ee064154d76807e06b6<>res://.godot/imported/choose_trailer.png-307e4e9a2f044e8816ce3a893901b50c.ctex::
 choose_van.png::CompressedTexture2D/CompressedTexture2D::2943915910416982227::1738851795::1741924222::1::::<><><>0<>0<>7ced6e398cbfe63764fa39bfb1400359<>res://.godot/imported/choose_van.png-412a4f5cf438c33465a3fa43bb0b4112.ctex::
-trucktown_rough1.mp3::AudioStreamMP3/AudioStreamMP3::3084743487848452761::1740723392::1741924221::1::::<><><>0<>0<>3ce37a60864ee26b4d4826ab402cc871<>res://.godot/imported/trucktown_rough1.mp3-cb084191a9d4821170ba433a65fd3a1a.mp3str::
-::res://Fonts/::1741924223
-! ! ! TERMS OF USE.txt::TextFile/TextFile::-1::1631568560::0::1::::<><><>0<>0<><>::
-BILLY-ARGEL.png::CompressedTexture2D/CompressedTexture2D::829339748066056815::1631568560::1741924222::1::::<><><>0<>0<>34c8928a35604570efc9c7ff77032f6a<>res://.godot/imported/BILLY-ARGEL.png-123e82447afbc36ed5a4c845f587560e.ctex::
+::res://Fonts/::1743126884
 ROOSTER PERSONAL USE.ttf::FontFile/FontFile::3264782876707167689::1631568560::1741924221::1::::<><><>0<>0<>3f5ecf84a332762b68c4353644da4f1c<>res://.godot/imported/ROOSTER PERSONAL USE.ttf-e966ddf9dd288d461c5fd282a739944a.fontdata::
-ROOSTER-A-1.png::CompressedTexture2D/CompressedTexture2D::6905939617610532606::1631568560::1741924223::1::::<><><>0<>0<>7103adc818caed657508ccaa40b9e3e8<>res://.godot/imported/ROOSTER-A-1.png-1f7a1b8d345e6409db4c83c36f95caa4.ctex::
-ROOSTER-B-1.png::CompressedTexture2D/CompressedTexture2D::7574593578930137258::1631568560::1741924223::1::::<><><>0<>0<>ad7c927233b8ebeb393086f86f1ebe7e<>res://.godot/imported/ROOSTER-B-1.png-0fdf1b72c3ebe54e783b8453d3270898.ctex::
 ::res://Models/::1741924571
 smoothie_machine.tscn::PackedScene/PackedScene::4099771353000194180::1741924571::0::1::::<><><>0<>0<><>::
 ::res://Models/Custom Objects/::1740547717
@@ -537,27 +532,28 @@ TrashCan_02.obj::Mesh/Mesh::3953979274481376174::1624667596::1741924234::1::::<>
 ::res://Player Controller/::1740966430
 ::res://Player Controller/Interaction/::1741069599
 ::res://Procedural Generation/::1740773186
-::res://Procedural Generation/Materials/::1743126272
+::res://Procedural Generation/Materials/::1743808600
 TerrainMaterial.tres::ShaderMaterial/ShaderMaterial::5390377932146466924::1739394216::0::1::::<><><>0<>0<><>::uid://b8dq66dul8dn5::::res://Procedural Generation/Materials/TerrainShader.tres
-TerrainShader.tres::VisualShader/VisualShader::4709874122288641116::1743126272::0::1::::<><><>0<>0<><>::uid://dyo8fsrd02e38::::res://Procedural Generation/Textures/Grass.jpg<>uid://b026v82butmpl::::res://Procedural Generation/Textures/Stone.jpg
+TerrainShader.tres::VisualShader::4709874122288641116::1743808600::0::1::::<><><>0<>0<><>::uid://dyo8fsrd02e38::::res://Procedural Generation/Textures/Grass.jpg<>uid://b026v82butmpl::::res://Procedural Generation/Textures/Stone.jpg
 ::res://Procedural Generation/Textures/::1741924222
 Grass.jpg::CompressedTexture2D/CompressedTexture2D::8874709148532494193::1739394216::1741924222::1::::<><><>0<>0<>68bf702aea39e1adfec9010539c09025<>res://.godot/imported/Grass.jpg-189d4f0286730837a8a5e5851ea16265.s3tc.ctex<*>res://.godot/imported/Grass.jpg-189d4f0286730837a8a5e5851ea16265.etc2.ctex::
 Stone.jpg::CompressedTexture2D/CompressedTexture2D::4198801477504485105::1739394216::1741924222::1::::<><><>0<>0<>feb98e339e3b35e1013b2f787815f6f9<>res://.godot/imported/Stone.jpg-9be7a59f0c787b439c00b48e7c15e129.s3tc.ctex<*>res://.godot/imported/Stone.jpg-9be7a59f0c787b439c00b48e7c15e129.etc2.ctex::
 TerrainFalloff.png::CompressedTexture2D/CompressedTexture2D::7903450519739311615::1739394216::1741924221::1::::<><><>0<>0<>759c856dc4be01e74eca7b90a9ef7e35<>res://.godot/imported/TerrainFalloff.png-aca0355fa9f8e548c655553fc7dd8c8b.ctex::
-::res://scenes/::1743126552
+::res://scenes/::1743808600
+campfire.tscn::PackedScene/PackedScene::3514019276285096566::1743564476::0::1::::<><><>0<>0<><>::uid://b4ti2p1sn5d5j::::res://Models/Zsky/Environoment Pack V.1/FBX/Trunk_03.fbx<>uid://c6ii60fqf6wad::::res://Models/Zsky/Environoment Pack V.1/FBX/Trunk_01.fbx<>uid://dphxonnhasxve::::res://Models/Zsky/Environoment Pack V.1/FBX/Rock_03.fbx
 car_base.tscn::PackedScene/PackedScene::6639054641309143335::1742901058::0::1::::<><><>0<>0<><>::uid://b527d1wndgfl5::::res://scripts/vehicle.gd<>uid://d4ostmqwgytk::::res://vehicles/particle_smoke.png<>uid://bqrwin8ccgptt::::res://vehicles/meshes/wheel.res<>uid://b2xi556mwp7ue::::res://vehicles/meshes/minivan.res<>uid://bv2teg5kfnlpn::::res://scripts/follow_camera.gd<>uid://claf7oqj3o2nx::::res://sounds/FX/engine.wav<>uid://sy2li7u35867::::res://sounds/FX/impact_1.wav<>uid://bf0h7s81yr8nj::::res://sounds/FX/impact_2.wav<>uid://sun2n8a4xapl::::res://sounds/FX/impact_3.wav<>uid://dpbayeeufya21::::res://sounds/FX/impact_4.wav<>uid://bju75l2w3r7vq::::res://vehicles/blob_shadow.png<>uid://c7gpob5ipo0ga::::res://scripts/enter_car_area.gd
 car_base_revamp.tscn::PackedScene/PackedScene::6565764404694087500::1741924573::0::1::::<><><>0<>0<><>::uid://b527d1wndgfl5::::res://scripts/vehicle.gd<>uid://bqrwin8ccgptt::::res://vehicles/meshes/wheel.res<>uid://bv2teg5kfnlpn::::res://scripts/follow_camera.gd<>uid://claf7oqj3o2nx::::res://sounds/FX/engine.wav<>uid://sy2li7u35867::::res://sounds/FX/impact_1.wav<>uid://bf0h7s81yr8nj::::res://sounds/FX/impact_2.wav<>uid://sun2n8a4xapl::::res://sounds/FX/impact_3.wav<>uid://dpbayeeufya21::::res://sounds/FX/impact_4.wav<>uid://d4ostmqwgytk::::res://vehicles/particle_smoke.png<>uid://bju75l2w3r7vq::::res://vehicles/blob_shadow.png<>uid://c7gpob5ipo0ga::::res://scripts/enter_car_area.gd
-car_select.tscn::PackedScene/PackedScene::5519083593120862163::1743126272::0::1::::<><><>0<>0<><>::uid://bvhu8uqjpckmb::::res://scripts/car_select.gd<>uid://bh7b4n4lg1uqt::::res://Car Select/choose_van.png<>uid://hvkcmpdq1t0k::::res://Car Select/choose_trailer.png<>uid://de7itkxhl0u28::::res://Car Select/choose_tow.png<>uid://dwmb5tbqoxmxx::::res://sounds/Songs/trucktown_rough1.mp3
+car_select.tscn::PackedScene/PackedScene::5519083593120862163::1743564475::0::1::::<><><>0<>0<><>::uid://bvhu8uqjpckmb::::res://scripts/car_select.gd<>uid://bh7b4n4lg1uqt::::res://Car Select/choose_van.png<>uid://hvkcmpdq1t0k::::res://Car Select/choose_trailer.png<>uid://de7itkxhl0u28::::res://Car Select/choose_tow.png<>uid://dwmb5tbqoxmxx::::res://sounds/Songs/trucktown_rough1.mp3
 PickupObject.tscn::PackedScene/PackedScene::8745043261315175445::1741924571::0::1::::<><><>0<>0<><>::uid://c0b75yjehfgvg::::res://scripts/pickup_object.gd
 Player.tscn::PackedScene/PackedScene::5178409782841226759::1741924571::0::1::::<><><>0<>0<><>::uid://dq1ttq4k8yltm::::res://scripts/InteractionController.gd
 rv_enlarged.tscn::PackedScene/PackedScene::2767982605798844815::1741924573::0::1::::<><><>0<>0<><>::uid://b527d1wndgfl5::::res://scripts/vehicle.gd<>uid://bqrwin8ccgptt::::res://vehicles/meshes/wheel.res<>uid://bv2teg5kfnlpn::::res://scripts/follow_camera.gd<>uid://claf7oqj3o2nx::::res://sounds/FX/engine.wav<>uid://sy2li7u35867::::res://sounds/FX/impact_1.wav<>uid://bf0h7s81yr8nj::::res://sounds/FX/impact_2.wav<>uid://sun2n8a4xapl::::res://sounds/FX/impact_3.wav<>uid://dpbayeeufya21::::res://sounds/FX/impact_4.wav<>uid://d4ostmqwgytk::::res://vehicles/particle_smoke.png<>uid://bju75l2w3r7vq::::res://vehicles/blob_shadow.png<>uid://c7gpob5ipo0ga::::res://scripts/enter_car_area.gd
 testbox.tscn::PackedScene/PackedScene::5483005763438063100::1741924573::0::1::::<><><>0<>0<><>::uid://cye5qu3rwkrsx::::res://vehicles/greenzone.tres
-town_model.tscn::PackedScene::2974040141263067362::1743126552::0::1::::<><><>0<>0<><>::uid://csxl8xxs3vcm4::::res://textures/grass_lossy.webp
-town_scene.tscn::PackedScene::8963914804262481880::1743126552::0::1::::<><><>0<>0<><>::uid://c8oe1va3vboo3::::res://scripts/town_scene.gd<>uid://do8e6m2808m33::::res://scripts/TerrainGeneration.gd<>uid://ci0vcpw8clwhb::::res://scripts/SpawnableObject.gd<>uid://crlk3u335xyr6::::res://Models/Rock/Rock.tscn<>uid://dju443moxaprb::::res://Models/Tree/Tree.tscn<>uid://ccvmdhwmngbpt::::res://Models/Rock/rock_01.tscn<>uid://bahksvedkbifv::::res://Models/Rock/rock_02.tscn<>uid://di8tg16tkho02::::res://Models/Rock/rock_03.tscn<>uid://c01bgj54aixwa::::res://Models/Rock/rock_04.tscn<>uid://csqfd2byykx4t::::res://Models/Rock/rock_05.tscn<>uid://dmxxbquqdblj3::::res://Models/Rock/rock_06.tscn<>uid://bpms6jemjgt36::::res://town/sky_day.tres<>uid://fkmt0cmnh6b::::res://scripts/path_3d.gd<>uid://ch7el1rqm8u4p::::res://textures/road_texture.jpg<>uid://j42e6fghic08::::res://textures/cement_lossy.webp<>uid://dsyrr7mlhvnu8::::res://Models/Zsky/Modular_HousesPack/House_05/OBJ/House_05.obj<>uid://b4gy0nsgtnw5t::::res://Models/Zsky/Modular_HousesPack/House_04/OBJ/House_04.obj<>uid://c5o7r63shx2hm::::res://scripts/spedometer.gd<>uid://bn4y8wxk2tolp::::res://scripts/PlayerController.gd<>uid://bxtkyke5v48ow::::res://scripts/interaction_controller.gd<>uid://dwuft5c3fyh0x::::res://scenes/PickupObject.tscn<>uid://dxkatpe85dcmi::::res://inventory_icon.png
+town_model.tscn::PackedScene/PackedScene::2974040141263067362::1743126552::0::1::::<><><>0<>0<><>::uid://csxl8xxs3vcm4::::res://textures/grass_lossy.webp
+town_scene.tscn::PackedScene::8963914804262481880::1743808600::0::1::::<><><>0<>0<><>::uid://c8oe1va3vboo3::::res://scripts/town_scene.gd<>uid://do8e6m2808m33::::res://scripts/TerrainGeneration.gd<>uid://ci0vcpw8clwhb::::res://scripts/SpawnableObject.gd<>uid://crlk3u335xyr6::::res://Models/Rock/Rock.tscn<>uid://dju443moxaprb::::res://Models/Tree/Tree.tscn<>uid://ccvmdhwmngbpt::::res://Models/Rock/rock_01.tscn<>uid://bahksvedkbifv::::res://Models/Rock/rock_02.tscn<>uid://di8tg16tkho02::::res://Models/Rock/rock_03.tscn<>uid://c01bgj54aixwa::::res://Models/Rock/rock_04.tscn<>uid://csqfd2byykx4t::::res://Models/Rock/rock_05.tscn<>uid://dmxxbquqdblj3::::res://Models/Rock/rock_06.tscn<>uid://bpms6jemjgt36::::res://town/sky_day.tres<>uid://fkmt0cmnh6b::::res://scripts/path_3d.gd<>uid://ch7el1rqm8u4p::::res://textures/road_texture.jpg<>uid://j42e6fghic08::::res://textures/cement_lossy.webp<>uid://dsyrr7mlhvnu8::::res://Models/Zsky/Modular_HousesPack/House_05/OBJ/House_05.obj<>uid://b4gy0nsgtnw5t::::res://Models/Zsky/Modular_HousesPack/House_04/OBJ/House_04.obj<>uid://c5o7r63shx2hm::::res://scripts/spedometer.gd<>uid://bn4y8wxk2tolp::::res://scripts/PlayerController.gd<>uid://bxtkyke5v48ow::::res://scripts/interaction_controller.gd<>uid://dwuft5c3fyh0x::::res://scenes/PickupObject.tscn<>uid://dxkatpe85dcmi::::res://inventory_icon.png<>uid://bqchnb8yjv1l7::::res://scenes/campfire.tscn
 tow_truck.tscn::PackedScene/PackedScene::2945802589605193517::1741924573::0::1::::<><><>0<>0<><>::uid://b527d1wndgfl5::::res://scripts/vehicle.gd<>uid://bqrwin8ccgptt::::res://vehicles/meshes/wheel.res<>uid://cbpqxxd14g8un::::res://vehicles/meshes/tow_truck.res<>uid://bv2teg5kfnlpn::::res://scripts/follow_camera.gd<>uid://ctglc27jx8xe2::::res://vehicles/meshes/truck_cab.res<>uid://sy2li7u35867::::res://sounds/FX/impact_1.wav<>uid://bf0h7s81yr8nj::::res://sounds/FX/impact_2.wav<>uid://sun2n8a4xapl::::res://sounds/FX/impact_3.wav<>uid://dpbayeeufya21::::res://sounds/FX/impact_4.wav<>uid://d4ostmqwgytk::::res://vehicles/particle_smoke.png<>uid://bju75l2w3r7vq::::res://vehicles/blob_shadow.png
 trailer_truck.tscn::PackedScene/PackedScene::8369804417720244340::1742901058::0::1::::<><><>0<>0<><>::uid://b527d1wndgfl5::::res://scripts/vehicle.gd<>uid://bqrwin8ccgptt::::res://vehicles/meshes/wheel.res<>uid://ctglc27jx8xe2::::res://vehicles/meshes/truck_cab.res<>uid://bv2teg5kfnlpn::::res://scripts/follow_camera.gd<>uid://sy2li7u35867::::res://sounds/FX/impact_1.wav<>uid://bf0h7s81yr8nj::::res://sounds/FX/impact_2.wav<>uid://sun2n8a4xapl::::res://sounds/FX/impact_3.wav<>uid://dpbayeeufya21::::res://sounds/FX/impact_4.wav<>uid://d4ostmqwgytk::::res://vehicles/particle_smoke.png<>uid://bju75l2w3r7vq::::res://vehicles/blob_shadow.png<>uid://dyg750wqca86r::::res://vehicles/truck_trailer.tres<>uid://q7uvsiqefkwr::::res://vehicles/truck_trailer.png
-::res://scripts/::1743126552
-car_select.gd::GDScript::3876111391037318369::1743126552::0::1::::<>Control<><>0<>0<><>::
+::res://scripts/::1743808600
+car_select.gd::GDScript/GDScript::3876111391037318369::1743126552::0::1::::<>Control<><>0<>0<><>::
 EndlessTerrain.gd::GDScript/GDScript::7922129304197826016::1740530311::0::1::::EndlessTerrain<>Node3D<><>0<>0<><>::
 enter_car_area.gd::GDScript/GDScript::7032206485585352976::1740705279::0::1::::<>InteractableObject<><>0<>0<><>::
 follow_camera.gd::GDScript/GDScript::3917285727435370927::1740727376::0::1::::<>Camera3D<><>0<>0<><>::
@@ -568,12 +564,12 @@ interaction_controller.gd::GDScript/GDScript::4040637826481387118::1741492149::0
 path_3d.gd::GDScript/GDScript::10951524896012387::1742882196::0::1::::<>Path3D<><>0<>1<><>::
 pickup_object.gd::GDScript/GDScript::6531624628331688640::1740973649::0::1::::<>RigidBody3D<><>0<>0<><>::
 Player.gd::GDScript/GDScript::1109880626167476004::1739354162::0::1::::<>CharacterBody3D<><>0<>0<><>::
-PlayerController.gd::GDScript/GDScript::3360259936415915653::1742905574::0::1::::PlayerController<>CharacterBody3D<><>0<>0<><>::
-SpawnableObject.gd::GDScript/GDScript::5387241012116310111::1742905574::0::1::::SpawnableObject<>Node<><>0<>0<><>::
+PlayerController.gd::GDScript/GDScript::3360259936415915653::1743551417::0::1::::PlayerController<>CharacterBody3D<><>0<>0<><>::
+SpawnableObject.gd::GDScript/GDScript::5387241012116310111::1743549965::0::1::::SpawnableObject<>Node<><>0<>0<><>::
 spedometer.gd::GDScript/GDScript::6909382939655426126::1738851795::0::1::::<>Button<><>0<>0<><>::
-TerrainGeneration.gd::GDScript/GDScript::8210329229001857020::1742899428::0::1::::TerrainGeneration<>Node<><>0<>0<><>::
+TerrainGeneration.gd::GDScript/GDScript::8210329229001857020::1743558358::0::1::::TerrainGeneration<>Node<><>0<>0<><>::
 terrain_chunk.gd::GDScript/GDScript::3518870373219700714::1740560462::0::1::::<>Node<><>0<>0<><>::
-town_scene.gd::GDScript/GDScript::7118264898901364744::1742905574::0::1::::<>Node3D<><>0<>0<><>::
+town_scene.gd::GDScript::7118264898901364744::1743808600::0::1::::<>Node3D<><>0<>0<><>::
 vehicle.gd::GDScript/GDScript::4549773893531640488::1740704462::0::1::::<>VehicleBody3D<><>0<>0<><>::
 ::res://sounds/::1740773187
 ::res://sounds/FX/::1741924226
@@ -585,24 +581,24 @@ impact_4.wav::AudioStreamWAV/AudioStreamWAV::8214202159646518848::1738851795::17
 ::res://sounds/Songs/::1741924221
 trucktown2_rough1.mp3::AudioStreamMP3/AudioStreamMP3::1819011268950681703::1740775246::1741924221::1::::<><><>0<>0<>d70236ccc3ddab202a27d47f8a2aa322<>res://.godot/imported/trucktown2_rough1.mp3-001acb7f9128368c560e81567b9e7668.mp3str::
 trucktown_rough1.mp3::AudioStreamMP3/AudioStreamMP3::8728304435209697581::1740723405::1741924221::1::::<><><>0<>0<>d8b6c0b56bd64337844556dca38df278<>res://.godot/imported/trucktown_rough1.mp3-c7582056eec3a6739d05913a4e4b9191.mp3str::
-::res://textures/::1743126552
+::res://textures/::1743126556
 cement.tres::StandardMaterial3D/StandardMaterial3D::2616088146665799013::1743126543::0::1::::<><><>0<>0<><>::uid://dkv00eeo3yu2w::::res://textures/cement.webp
 cement.webp::CompressedTexture2D/CompressedTexture2D::7906065206908765244::1738851795::1743126544::1::::<><><>0<>0<>fc36b185498cb2e53a169c73abb6b40f<>res://.godot/imported/cement.webp-9b2e9e7965d48eeef5531e5ffafefd2a.ctex::
-cement_lossy.webp::CompressedTexture2D::693214685820500139::1738851795::1743126556::1::::<><><>0<>0<>bfa3898b40bdd2b6de2f6245edd76a99<>res://.godot/imported/cement_lossy.webp-2320bd77c50b4761168a02bf21abeb68.bptc.ctex<*>res://.godot/imported/cement_lossy.webp-2320bd77c50b4761168a02bf21abeb68.astc.ctex::
+cement_lossy.webp::CompressedTexture2D/CompressedTexture2D::693214685820500139::1738851795::1743126556::1::::<><><>0<>0<>bfa3898b40bdd2b6de2f6245edd76a99<>res://.godot/imported/cement_lossy.webp-2320bd77c50b4761168a02bf21abeb68.bptc.ctex<*>res://.godot/imported/cement_lossy.webp-2320bd77c50b4761168a02bf21abeb68.astc.ctex::
 glass.tres::StandardMaterial3D/StandardMaterial3D::2245049477100854576::1743126516::0::1::::<><><>0<>0<><>::uid://dyyjawpfnrh0w::::res://textures/glass_normal.tres<>uid://cd8ptni1nkv0a::::res://textures/glass_refraction.tres
 glass_normal.tres::NoiseTexture2D/NoiseTexture2D::8893886996355409212::1741484511::0::1::::<><><>0<>0<><>::
 glass_refraction.tres::NoiseTexture2D/NoiseTexture2D::5052477745521060614::1741484511::0::1::::<><><>0<>0<><>::
 grass.tres::StandardMaterial3D/StandardMaterial3D::7073446329274880064::1743126543::0::1::::<><><>0<>0<><>::uid://b2g4dq0w72e68::::res://textures/grass.webp
 grass.webp::CompressedTexture2D/CompressedTexture2D::4295672758653397927::1738851795::1743126544::1::::<><><>0<>0<>42ed993ac03c09b0bd3580e8f3fb0fa2<>res://.godot/imported/grass.webp-78b9ee958cf8dcd9afd3cf68b67f74a1.ctex::
 grass_albedo.tres::NoiseTexture2D/NoiseTexture2D::1825112366555299891::1741484511::0::1::::<><><>0<>0<><>::
-grass_lossy.webp::CompressedTexture2D::6084449303757090597::1738851795::1743126556::1::::<><><>0<>0<>eadebe9c7cfe8b520a1968b0c9ef4d5f<>res://.godot/imported/grass_lossy.webp-9e58f387c04e5473612e3492320acbfb.bptc.ctex<*>res://.godot/imported/grass_lossy.webp-9e58f387c04e5473612e3492320acbfb.astc.ctex::
+grass_lossy.webp::CompressedTexture2D/CompressedTexture2D::6084449303757090597::1738851795::1743126556::1::::<><><>0<>0<>eadebe9c7cfe8b520a1968b0c9ef4d5f<>res://.godot/imported/grass_lossy.webp-9e58f387c04e5473612e3492320acbfb.bptc.ctex<*>res://.godot/imported/grass_lossy.webp-9e58f387c04e5473612e3492320acbfb.astc.ctex::
 grass_normal.tres::NoiseTexture2D/NoiseTexture2D::4638290799261426656::1741484511::0::1::::<><><>0<>0<><>::
 ice.tres::StandardMaterial3D/StandardMaterial3D::4860093497887394601::1741484960::0::1::::<><><>0<>0<><>::
 lava.tres::StandardMaterial3D/StandardMaterial3D::4693489738199137427::1741484511::0::1::::<><><>0<>0<><>::
 marble.tres::StandardMaterial3D/StandardMaterial3D::6925206557119423652::1741484511::0::1::::<><><>0<>0<><>::
 pixel_art.tres::StandardMaterial3D/StandardMaterial3D::8964765609782415969::1738851795::0::1::::<><><>0<>0<><>::
-Road.png::CompressedTexture2D::7594353145482259218::1667561880::1743126554::1::::<><><>0<>0<>ef20d56e190c2b7a9d49dca0f4314e2d<>res://.godot/imported/Road.png-1e911610f4f5ed5ac5433ce5ec922ecf.s3tc.ctex<*>res://.godot/imported/Road.png-1e911610f4f5ed5ac5433ce5ec922ecf.etc2.ctex::
-road_texture.jpg::CompressedTexture2D::5330487265299464129::1740552759::1743126554::1::::<><><>0<>0<>aad4dc362996e4cdd3bce3b038ed5c32<>res://.godot/imported/road_texture.jpg-75fdf9bd5f87b3e3c0e5a80a16161d58.s3tc.ctex<*>res://.godot/imported/road_texture.jpg-75fdf9bd5f87b3e3c0e5a80a16161d58.etc2.ctex::
+Road.png::CompressedTexture2D/CompressedTexture2D::7594353145482259218::1667561880::1743126554::1::::<><><>0<>0<>ef20d56e190c2b7a9d49dca0f4314e2d<>res://.godot/imported/Road.png-1e911610f4f5ed5ac5433ce5ec922ecf.s3tc.ctex<*>res://.godot/imported/Road.png-1e911610f4f5ed5ac5433ce5ec922ecf.etc2.ctex::
+road_texture.jpg::CompressedTexture2D/CompressedTexture2D::5330487265299464129::1740552759::1743126554::1::::<><><>0<>0<>aad4dc362996e4cdd3bce3b038ed5c32<>res://.godot/imported/road_texture.jpg-75fdf9bd5f87b3e3c0e5a80a16161d58.s3tc.ctex<*>res://.godot/imported/road_texture.jpg-75fdf9bd5f87b3e3c0e5a80a16161d58.etc2.ctex::
 sand.tres::StandardMaterial3D/StandardMaterial3D::1994388060988837846::1743126516::0::1::::<><><>0<>0<><>::uid://caf47v17px0e::::res://textures/sand_albedo.tres<>uid://2u8c47a4cd5::::res://textures/sand_normal.tres
 sand_albedo.tres::NoiseTexture2D/NoiseTexture2D::140734774675937194::1741484511::0::1::::<><><>0<>0<><>::
 sand_normal.tres::NoiseTexture2D/NoiseTexture2D::57011621714908980::1741484511::0::1::::<><><>0<>0<><>::

@@ -104,6 +104,7 @@ func generate(seed : int, chunk_coord : Vector2, lod : int):
 		
 	nav_region.bake_navigation_mesh()
 	await nav_region.bake_finished
+	#return mesh
 	
 	# spawn in AI after bake has finished
 	
