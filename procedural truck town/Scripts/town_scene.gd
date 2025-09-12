@@ -35,15 +35,15 @@ func _ready():
 	var terrain_gen_node = $TerrainGeneration
 	
 	
-	var radius : int = 2
+	var radius : int = 3
 	var origin : Vector2 = Vector2(0,0)
 	for i in range(-radius + origin.x, radius+1 + origin.x): # x axis i think
 		for j in range(-radius + origin.y, radius+1 + origin.y): # y axis i think
 			var lod : int = 0
 			if(abs(i) > 1 or abs(j) > 1):
-				lod = 0
+				lod = 5
 			elif(abs(i) > 0 or abs(j) > 0):
-				lod = 0
+				lod = 3
 			chunk_dict[Vector2(i, j)] = true
 			terrain_chunks_visible_last_update.append(Vector2(i,j))
 			terrain_gen_node.generate(seed, Vector2(i,j), lod)	
@@ -64,7 +64,7 @@ func _process(delta):
 	var player_2dpos_y = car_pos.z
 	
 	viewer_pos_2d = Vector2(player_2dpos_x, player_2dpos_y)
-	update_visible_chunks(delta)
+	#update_visible_chunks(delta)
 	
 func update_visible_chunks(delta):
 	#for i in range(len(terrain_chunks_visible_last_update)):
@@ -102,7 +102,7 @@ func update_visible_chunks(delta):
 	var terrain_gen_node = $TerrainGeneration
 	var radius : int = 3
 	var origin : Vector2 = Vector2(x_current_chunk_coord, y_current_chunk_coord)
-	for i in range(-radius + origin.x, radius+1 + origin.x): # x axis i think
+	'''for i in range(-radius + origin.x, radius+1 + origin.x): # x axis i think
 		for j in range(-radius + origin.y, radius+1 + origin.y): # y axis i think
 			var viewed_chunk_coord: Vector2 = Vector2(i, j)
 			if chunk_dict.has(viewed_chunk_coord):
@@ -114,7 +114,7 @@ func update_visible_chunks(delta):
 				lod = 3
 			elif(abs(i) > 0 or abs(j) > 0):
 				lod = 6
-			terrain_gen_node.generate(seed, Vector2(i,j), lod)
+			terrain_gen_node.generate(seed, Vector2(i,j), lod)'''
 	#print(len(chunk_dict))
 
 func _input(event: InputEvent) -> void:
@@ -160,6 +160,7 @@ func set_mood(p_mood: Mood) -> void:
 			
 class TerrainChunk:
 	var mesh_instance: MeshInstance2D  # Use MeshInstance3D for 3D
+	var mesh_array: Array
 	var position: Vector2
 	var bounds: Rect2  # Use AABB for 3D
 
@@ -172,19 +173,21 @@ class TerrainChunk:
 		mesh.size = Vector2(size, size)
 
 		# Create a MeshInstance2D (or MeshInstance3D for 3D)
-		mesh_instance = MeshInstance2D.new()
+		'''mesh_instance = MeshInstance2D.new()
 		mesh_instance.mesh = mesh
 		mesh_instance.position = position
 		mesh_instance.scale = Vector2(size / 10.0, size / 10.0)
-		parent.add_child(mesh_instance)
+		parent.add_child(mesh_instance)'''
 		set_visible(false)
 		
 	func on_map_data_received():
+		var thread = Thread.new()
 		# pass in map_data : MapData
 		# then do mapGenerator.RequestMeshData(map_data, on_mesh_data_received) but in gdscript
 		pass
 		
 	func on_mesh_data_received():
+		var thread = Thread.new()
 		# pass in mesh_data : MeshData
 		# then do mesh_filter.mesh = mesh_data.CreateMesh()
 		pass

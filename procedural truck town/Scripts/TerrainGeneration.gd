@@ -118,9 +118,9 @@ func get_noise_y(x, z) -> float:
 	
 	var x_pixel = int(x_percent * falloff_image.get_width())
 	var y_pixel = int(z_percent * falloff_image.get_height())
-	var falloff : float = falloff_image.get_pixel(x_pixel, y_pixel).r
-	if !use_falloff:
-		falloff = 1.0
+	#var falloff : float = falloff_image.get_pixel(x_pixel, y_pixel).r
+	#if !use_falloff:
+	var falloff = 1.0
 	
 	return adjusted_value * max_height * falloff
 	
